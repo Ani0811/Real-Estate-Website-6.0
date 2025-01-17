@@ -2,6 +2,8 @@
 export default {
   content: ["./*.{html,js}"],
   theme: {
+
+    
     // custom Font Size
     extend: {
       fontSize:{

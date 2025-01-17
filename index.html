@@ -10,12 +10,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js@1.11.2/src/toastify.css">
     <script src="./node_modules/toastify-js/src/toastify.js"></script>
+    <script src="./auth/login.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+    <script type="module" src="./index.js" defer></script>
 
   </head>
   <body>
  <!--nav bar start-->
   <!--desktop version-->
-    <nav class="bg-[#2B2B2B] sticky top-0 nav-animation">
+    <nav class="bg-[#2B2B2B] fixed top-0 left-0 w-full z-50 nav-animation shadow">
       <div class="px-5 max-w-[1200px] mx-auto  text-[#C4C4C4] hidden h-20 items-center justify-between lg:flex cursor-pointer">
         <!--<div class="text-[20px] font-bold  gap-9 ">Logo</div>-->
         <div class="text-[20px] font-bold flex items-center gap-9">
@@ -31,11 +36,16 @@
           </ul>
            <!-- Login Button -->
         <div class="ml-auto">
-          <button class="bg-[#007BFF] hover:bg-[#0056b3] text-white font-bold py-2 px-6 rounded"
+          <button id="loginButton" class="bg-[#007BFF] hover:bg-[#0056b3] text-white font-bold py-2 px-6 rounded" 
                   onclick="location.href='login.html'">
             Login
           </button>
         </div>
+      </button>
+      <button id="logoutButton" class="bg-[#FF0000] hover:bg-[#cc0000] text-white font-bold py-2 px-6 rounded hidden none"
+              onclick="logout()">
+        Logout
+      </button>
       </div>
        <!--desktop version-->
      </nav>
@@ -59,7 +69,7 @@
            </ul>
            <!-- Login Button -->
         <div class="ml-auto">
-          <button class="bg-[#007BFF] hover:bg-[#0056b3] text-white font-bold py-2 px-6 rounded"
+          <button id="loginButton" class="bg-[#007BFF] hover:bg-[#0056b3] text-white font-bold py-2 px-6 rounded"
                   onclick="location.href='login.html'">
             Login
           </button>
@@ -178,19 +188,19 @@
 <!--Brand Logo start-->
 <section class="h-[100px] flex gap-2 flex-row overflow-x-auto overflow-y-hidden items-center p-5 md:max-w-[1200px] md:mx-auto md:justify-between md:h-[200px] md:py-5">
   <div class="h-20 grid place-content-center min-w-[7.5rem] brand-logo">
-    <img src="brand/logo_1.png" alt="">
+    <img src="brand/logo_1.png" alt="" class="md:min-w-[8rem] transform transition-transform duration-300 hover:scale-105">
   </div>
   <div class="h-20 grid place-content-center min-w-[7.5rem] brand-logo">
-    <img src="brand/logo_2.png" alt="" class="md:min-w-[8rem]">
+    <img src="brand/logo_2.png" alt="" class="md:min-w-[8rem] transform transition-transform duration-300 hover:scale-105">
   </div>
   <div class="h-20 grid place-content-center min-w-[7.5rem] brand-logo">
-    <img src="brand/logo_3.png" alt="" class="md:min-w-[8rem]">
+    <img src="brand/logo_3.png" alt="" class="md:min-w-[8rem] transform transition-transform duration-300 hover:scale-105">
   </div>
   <div class="h-20 grid place-content-center min-w-[7.5rem] brand-logo">
-    <img src="brand/logo_4.png" alt="" class="md:min-w-[8rem]">
+    <img src="brand/logo_4.png" alt="" class="md:min-w-[8rem] transform transition-transform duration-300 hover:scale-105">
   </div>
   <div class="h-20 grid place-content-center min-w-[7.5rem] brand-logo">
-    <img src="brand/logo_5.png" alt="" class="md:min-w-[8rem]">
+    <img src="brand/logo_5.png" alt="" class="md:min-w-[8rem] transform transition-transform duration-300 hover:scale-105">
   </div>
 </section>
 <!--Brand Logo end-->
@@ -204,32 +214,54 @@
     </div>
 
     <div class="flex gap-4 overflow-auto md:mt-20 p-5">
-      <div class="service-card flex flex-col gap-2 min-w-[16.25rem] md:gap-8">
-        <div>
-          <img src="services/services_1.png" alt="" class="shadow-md md:w-[370px] md:h-[270px]">
+      <div class="service-card flex flex-col gap-4 min-w-[16.25rem] md:gap-8 mt-16">
+        <div class="overflow-hidden rounded-lg">
+          <img 
+            src="services/services_1.png" 
+            alt="Industrial Service" 
+            class="shadow-md md:w-[370px] md:h-[270px] transform transition-transform duration-300 hover:scale-105"
+          >
         </div>
         <h3 class="font-bold text-lg">Industrial</h3>
-        <p class="font-medium text-base text-[#C4C4C4]">Industrial development is our main line of business. We do Factory Construction, Warehouse and others</p>
+        <p class="font-medium text-base text-[#C4C4C4]">
+          Industrial development is our main line of business. We do Factory Construction, Warehouse and others.
+        </p>
       </div>
-      <div class="service-card flex flex-col gap-2 min-w-[16.25rem] md:gap-8">
-        <div>
-          <img src="services/services_2.png" alt="" class="shadow-md md:w-[370px] md:h-[270px]">
+      
+      
+      <div class="service-card flex flex-col gap-4 min-w-[16.25rem] md:gap-8 mt-16">
+        <div class="overflow-hidden rounded-lg">
+          <img 
+            src="services/services_2.png" 
+            alt="Industrial Service" 
+            class="shadow-md md:w-[370px] md:h-[270px] transform transition-transform duration-300 hover:scale-105"
+          >
         </div>
         <h3 class="font-bold text-lg">Commercial</h3>
-        <p class="font-medium text-base text-[#C4C4C4]">Industrial development is our main line of business. We do Factory Construction, Warehouse and others</p>
+        <p class="font-medium text-base text-[#C4C4C4]">
+          We also provide commercial. office buildings, residential duplexes, restaurants.
+        </p>
       </div>
-      <div class="service-card flex flex-col gap-2 min-w-[16.25rem] md:gap-8">
-        <div class="service-card flex flex-col gap-2 min-w-[16.25rem] md:gap-8">
-  <div>
-    <img src="services/services_3.png" alt="" class="shadow-md md:w-[370px] md:h-[270px]">
-  </div>
-  <h3 class="font-bold text-lg">Residential</h3>
-  <p class="font-medium text-base text-[#C4C4C4]">Industrial development is our main line of business. We do Factory Construction, Warehouse and others</p>
-</div>
+      
+      <div class="service-card flex flex-col gap-4 min-w-[16.25rem] md:gap-8 mt-16">
+        <div class="overflow-hidden rounded-lg">
+          <img 
+            src="services/services_3.png" 
+            alt="Industrial Service" 
+            class="shadow-md md:w-[370px] md:h-[270px] transform transition-transform duration-300 hover:scale-105"
+          >
+        </div>
+        <h3 class="font-bold text-lg">Residential</h3>
+        <p class="font-medium text-base text-[#C4C4C4]">
+          Residential properties liike family homes, condos, cooperatives, duplexes, townhouses we care for.
+        </p>
+      </div>
     </div>
   </div>
 </section>
-<!--//-->
+
+
+<!--What Make Us Diffeent-->
 <section class="p-5 lg:max-w-[1200px] lg:mx-auto ">
   <div class="flex flex-col gap-2 lg:gap-4">
     <div class="h-1 w-[90px] blue-grad lg:h-2"></div>
@@ -241,29 +273,29 @@
 
   <div class="flex flex-col items-center text-center mt-10 gap-8 lg:flex-row lg:mx-auto lg:mt-20">
     <div class="what-makes-us-section flex flex-col gap-2 min-w-[16.25rem] max-w-[14.625rem] items-center lg:items-start lg:text-start">
-      <div>
-        <img src="makesus/make_us_1.png" alt="">
+      <div  class="group overflow-hidden">
+        <img src="makesus/make_us_1.png" alt="" class="transition-transform duration-300 group-hover:scale-105">
       </div>
       <h3 class="font-bold text-lg mt-2">Experienced</h3>
       <p class="font-medium text-base text-[#C4C4C4] min-h-[4.5rem]">Our experience of 25 years of building and making achievements in the world of development</p>
     </div>
     <div class="what-makes-us-section flex flex-col gap-2 min-w-[16.25rem] max-w-[14.625rem] items-center lg:items-start lg:text-start">
-      <div>
-        <img src="makesus/make_us_2.png" alt="">
+      <div class="group overflow-hidden">
+        <img src="makesus/make_us_2.png" alt="" class="transition-transform duration-300 group-hover:scale-105">
       </div>
       <h3 class="font-bold text-lg mt-2">Competitive Price</h3>
       <p class="font-medium text-base text-[#C4C4C4] min-h-[4.5rem]">The prices we offer you are very competitive without reducing the quality of the company's work in the slightest</p>
     </div>
     <div class="what-makes-us-section flex flex-col gap-2 min-w-[16.25rem] max-w-[14.625rem] items-center lg:items-start lg:text-start">
-      <div>
-        <img src="makesus/make_us_3.png" alt="">
+      <div class="group overflow-hidden">
+        <img src="makesus/make_us_3.png" alt="" class="transition-transform duration-300 group-hover:scale-105">
       </div>
       <h3 class="font-bold text-lg mt-2">On Time</h3>
       <p class="font-medium text-base text-[#C4C4C4] min-h-[4.5rem]">We prioritize the quality of our work and finish it on time</p>
     </div>
     <div class="what-makes-us-section flex flex-col gap-2 min-w-[16.25rem] max-w-[14.625rem] items-center lg:items-start lg:text-start">
-      <div>
-        <img src="makesus/make_us_1.png" alt="">
+      <div class="group overflow-hidden">
+        <img src="makesus/make_us_1.png" alt="" class="transition-transform duration-300 group-hover:scale-105">
       </div>
       <h3 class="font-bold text-lg mt-2">Best Materials</h3>
       <p class="font-medium text-base text-[#C4C4C4] min-h-[4.5rem]">The material determines the building itself so we recommend that you use the best & quality materials in its class.</p>
@@ -276,10 +308,10 @@
 
   <!--Find a Team section start-->
 <section class="p-5 md:max-w-[1200px] md:mx-auto flex flex-col lg:flex-row" id="Team">
-  <div class="bg-team-bg-image h-[340px] bg-no-repeat bg-cover flex justify-center items-end mb-40 md:flex-1 md:mr-40 md:flex-col md:h-[500px]">
-    <div class="black-grad h-[250px] w-[250px] relative top-24 flex flex-col p-5 gap-2 items-center md:top-0 md:-right-24 n">
-      <div>
-        <img src="/teams/team_avatar.png" alt="" class="rounded-full ">
+  <div class="bg-team-bg-image h-[340px] bg-no-repeat bg-cover flex justify-center items-end mb-40 md:flex-1 md:mr-40 md:flex-col md:h-[500px] ">
+    <div class="black-grad h-[250px] w-[250px] relative top-24 flex flex-col p-5 gap-2 items-center md:top-0 md:-right-24 ">
+      <div class="group overflow-hidden">
+        <img src="/teams/team_avatar.png" alt="Teams" class="rounded-full transform transition-transform duration-300 group-hover:scale-105">
       </div>
       <h3 class="font-bold text-lg text-white">Dianne Russell</h3>
       <p class="text-center text-base text-[#E5E5E5] font-medium">More than 20 years of experience in the fieldarchitecture and has worked on project up to 100+</p>
@@ -305,8 +337,8 @@
   <!--About Us section start-->
 <section class="p-4 md:max-w-[1200px] md:mx-auto" id="About Us">
   <div class="flex flex-col gap-2 min-w-[16.25rem] md:flex-1 md:flex-row-reverse">
-    <div >
-      <img src="/Mask Group.png" alt="" class="shadow-md w-full md:max-w-[570px] md:border-8 md:border-white flex-1">
+    <div class="group overflow-hidden">
+      <img src="/Mask Group.png" alt="" class="shadow-md w-full md:max-w-[570px] md:border-8 md:border-white flex-1 transform transition-transform duration-300 group-hover:scale-105">
     </div>
     <div class="flex flex-col gap-4 flex-1 md:gap-8">
       <h3 class="font-bold text-lg md:text-4xl md:font-bold">Our Story <br> Who we are</h3>
@@ -322,36 +354,57 @@
 <section class="p-5 md:max-w-[1200px] md:mx-auto md:gap-16 md:flex md:flex-col" id="Articles">
   <h2 class="text-xl font-bold md:text-4xl md:gap-4">News & Updates</h2>
   <div class="flex gap-4 overflow-x-hidden">
-    <div class="flex flex-col gap-4 min-w-[14rem] ">
-      <div>
-        <img src="news/news1.png" alt="" class="shadow-md w-full md:w-[300px] ">
+    <div class="flex flex-col gap-4 min-w-[14rem] pt-16">
+      <div class="group overflow-hidden">
+        <img src="news/news1.png" alt="" class="shadow-md w-full md:w-[300px] transform transition-transform duration-300 group-hover:scale-105">
       </div>
       <div class="flex gap-4">
-        <div><p class="font-bold text-lg leading-none">12</p><p class="text-base font-bold">Jan</p></div>
-        <h4 class="font-bold text-sm md:text-md">Elements of Content in  <br>Epoxy Paint</h4>
+        <div>
+          <p class="font-bold text-lg leading-none">12</p>
+          <p class="text-base font-bold">Jan</p>
+        </div>
+        <h4 class="font-bold text-sm md:text-md group-hover:text-[#0A72AD] transition-colors duration-300">Elements of Content in <br> Epoxy Paint</h4>
       </div>
-      <p class="text-[#C4C4C4] font-medium text-sm md:text-base">Epoxy paint and epoxy floor contractor. Have you heard the two terms? And what does that have to do with the construction of existing buildings? Epoxy itself is included in the type of resin...<a href="https://example.com" class="text-[#0A72AD]">Read more</a></p>
+      <p class="text-[#C4C4C4] font-medium text-sm md:text-base group-hover:text-[#888] transition-colors duration-300">
+        Epoxy paint and epoxy floor contractor. Have you heard the two terms? And what does that have to do with the construction of existing buildings? Epoxy itself is included in the type of resin...<a href="https://example.com" class="text-[#0A72AD] hover:underline">Read more</a>
+      </p>
     </div>
-    <div class="flex flex-col gap-4 min-w-[14rem]">
-      <div>
-        <img src="news/news2.png" alt="" class="shadow-md w-full md:w-[300px] ">
+    
+    <div class="flex flex-col gap-4 min-w-[14rem] pt-16">
+      <div class="group overflow-hidden">
+        <img src="news/news2.png" alt="" class="shadow-md w-full md:w-[300px] transform transition-transform duration-300 group-hover:scale-105">
       </div>
       <div class="flex gap-4">
-        <div><p class="font-bold text-lg leading-none">12</p><p class="text-base font-bold">Jan</p></div>
-        <h4 class="font-bold text-sm md:text-md">5 Right Steps in Warehouse  <br>Planning and Construction</h4>
+        <div>
+          <p class="font-bold text-lg leading-none">12</p>
+          <p class="text-base font-bold">Jan</p>
+        </div>
+        <h4 class="font-bold text-sm md:text-md group-hover:text-[#0A72AD] transition-colors duration-300">5 Right Steps in Warehouse <br> Planning and Construction</h4>
       </div>
-      <p class="text-[#C4C4C4] font-medium text-sm md:text-base">Planning the construction of a warehouse for both industrial, personal and other goods storage must be done carefully. When the planning is done properly, the construction is...<a href="https://example.com" class="text-[#0A72AD]">Read more</a></p>
+      <p class="text-[#C4C4C4] font-medium text-sm md:text-base group-hover:text-[#888] transition-colors duration-300">
+        Planning the construction of a warehouse for both industrial, personal and other goods storage must be done carefully. When the planning is done properly, the construction is...<a href="https://example.com" class="text-[#0A72AD] hover:underline">Read more</a>
+      </p>
     </div>
-    <div class="flex flex-col gap-4 min-w-[14rem] md:self-center ">
-      <div>
-        <img src="news/news3.png" alt="" class="shadow-md w-full md:w-[300px] ">
+    
+    
+    <div class="flex flex-col gap-4 min-w-[14rem] md:self-center pt-16">
+      <div class="group overflow-hidden">
+        <img src="news/news3.png" alt="" class="shadow-md w-full md:w-[300px] transform transition-transform duration-300 group-hover:scale-105">
       </div>
       <div class="flex gap-4">
-        <div><p class="font-bold text-lg leading-none">12</p><p class="text-base font-bold">Jan</p></div>
-        <h4 class="font-bold text-sm md:text-md">The Right Solution to Build a  Sturdy Type 45 House</h4>
+        <div>
+          <p class="font-bold text-lg leading-none">12</p>
+          <p class="text-base font-bold">Jan</p>
+        </div>
+        <h4 class="font-bold text-sm md:text-md group-hover:text-[#0A72AD] transition-colors duration-300">
+          The Right Solution to Build a Sturdy Type 45 House
+        </h4>
       </div>
-      <p class="text-[#C4C4C4] font-medium text-sm md:text-base">Having a solid home is certainly everyone's dream. How not, the house is a place where the residents can rest and take shelter from the bad weather... <a href="https://example.com" class="text-[#0A72AD]">Read more</a></p>
+      <p class="text-[#C4C4C4] font-medium text-sm md:text-base group-hover:text-[#888] transition-colors duration-300">
+        Having a solid home is certainly everyone's dream. How not, the house is a place where the residents can rest and take shelter from the bad weather...<a href="https://example.com" class="text-[#0A72AD] hover:underline">Read more</a>
+      </p>
     </div>
+    
   </div>
 </section>
 <!--Articles section end-->        
@@ -361,30 +414,90 @@
 <!--project section start//-->
 <section class="p-5 flex flex-col gap-8 md:max-w-[1200px] md:mx-auto md:gap-24">
   <h2 class="text-xl font-bold text-[#242527] md:text-4xl">Our collection <br> of best projects</h2>
-  <div class="grid grid-cols-2 gap-5 md:grid-cols-4">
-    <picture >
-      <source media="(min-width: 768px)" srcset="/projects_big/project_big_1.png" />
-      <source media="(max-width: 800px)" srcset="/projects/project1.png" />
-      <img src="/public/projects/project1.png" alt="Small projects" class="md:w-[500px] md:h-[478px] " />
-    </picture>
+  <div class="grid grid-cols-2 gap-5 md:grid-cols-4 ">
+    <div class="relative group pt-16  ">
+      <picture class="overflow-hidden block">
+        <source media="(min-width: 768px)" srcset="/projects_big/project_big_1.png" />
+        <source media="(max-width: 800px)" srcset="/projects/project1.png" />
+        <img 
+          src="/public/projects/project1.png" 
+          alt="Small projects" 
+          class="md:w-[500px] md:h-[478px] transform transition-transform duration-300 group-hover:scale-105"
+        />
+      </picture>
+      <!-- Hover Text -->
+      <div 
+        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        <p class="text-center font-bold text-lg md:text-xl px-4">
+          Explore our exciting project details!
+        </p>
+      </div>
+    </div>
+    
 
-    <picture >
-      <source media="(min-width: 768px)" srcset="/projects_big/project_big_2.png" />
-      <source media="(max-width: 800px)" srcset="/projects/project2.png" />
-      <img src="/public/projects/project2.png" alt="Small projects" class="md:w-[500px] md:h-[478px] " />
-    </picture>
+    <div class="relative group pt-16">
+      <picture class="overflow-hidden block">
+        <source media="(min-width: 768px)" srcset="/projects_big/project_big_2.png" />
+        <source media="(max-width: 800px)" srcset="/projects/project2.png" />
+        <img 
+          src="/public/projects/project2.png" 
+          alt="Small projects" 
+          class="md:w-[500px] md:h-[478px] transform transition-transform duration-300 group-hover:scale-105"
+        />
+      </picture>
+      <!-- Hover Text -->
+      <div 
+        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        <p class="text-center font-bold text-lg md:text-xl px-4">
+          Discover the intricate details of this amazing project!
+        </p>
+      </div>
+    </div>
+    
 
-    <picture >
-      <source media="(min-width: 768px)" srcset="/projects_big/project_big_3.png" />
-      <source media="(max-width: 800px)" srcset="/projects/project3.png" />
-      <img src="/public/projects/project3.png" alt="Small projects" class="md:w-[500px] md:h-[478px]" />
-    </picture>
+    <div class="relative group pt-16">
+      <picture class="overflow-hidden block">
+        <source media="(min-width: 768px)" srcset="/projects_big/project_big_3.png" />
+        <source media="(max-width: 800px)" srcset="/projects/project3.png" />
+        <img 
+          src="/public/projects/project3.png" 
+          alt="Small projects" 
+          class="md:w-[500px] md:h-[478px] transform transition-transform duration-300 group-hover:scale-105"
+        />
+      </picture>
+      <!-- Hover Text -->
+      <div 
+        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        <p class="text-center font-bold text-lg md:text-xl px-4">
+          Explore this innovative and creative project!
+        </p>
+      </div>
+    </div>
+    
 
-    <picture >
-      <source media="(min-width: 768px)" srcset="/projects_big/project_big_4.png" />
-      <source media="(max-width: 800px)" srcset="/projects/project4.png" />
-      <img src="/public/projects/project4.png" alt="Small projects" class="md:w-[500px] md:h-[478px]" />
-    </picture>
+    <div class="relative group pt-16">
+      <picture class="overflow-hidden block">
+        <source media="(min-width: 768px)" srcset="/projects_big/project_big_4.png" />
+        <source media="(max-width: 800px)" srcset="/projects/project4.png" />
+        <img 
+          src="/public/projects/project4.png" 
+          alt="Small projects" 
+          class="md:w-[500px] md:h-[478px] transform transition-transform duration-300 group-hover:scale-105"
+        />
+      </picture>
+      <!-- Hover Text -->
+      <div 
+        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        <p class="text-center font-bold text-lg md:text-xl px-4">
+          Discover the details of this amazing project!
+        </p>
+      </div>
+    </div>
+    
   </div>
 </section>
 <!--project section end//-->
@@ -393,19 +506,22 @@
  <section class="p-5 flex flex-col gap-8 md:max-w-[1200px] md:mx-auto md:gap-24" id="Contact Us">
   <div class="p-4 mx-auto max-w-xl bg-white font-[sans-serif]">
     <h1 class="text-2xl text-gray-800 font-bold text-center">Contact Us</h1>
-    <form class="mt-8 space-y-4" action="/post" method="POST">
-      <input type='text' name='name' placeholder='Name' class="w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all" />
-      <input type='email' name='email' placeholder='Email' class="w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all" />
-      <input type='text' name='subject' placeholder='Subject' class="w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all" />
-      <textarea name='message' placeholder='Message' rows="4" class="w-full px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm pt-3 outline-none transition-all"></textarea>
-      <button type='submit' class="text-white bg-black hover:bg-gray-900 tracking-wide text-sm px-4 py-2.5 w-full outline-none">Send</button>
+    <form class="mt-8 space-y-4 " id="contactForm">
+      <input type='text' name='name' placeholder='Name' class="name w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all" />
+      <input type='email' name='email' placeholder='Email' class="email w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all" />
+      <input type='text' name='subject' placeholder='Subject' class="subject w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all" />
+      <textarea name='message' placeholder='Message' rows="4" class="message w-full px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm pt-3 outline-none transition-all"></textarea>
+      <div class="flex justify-center">
+        <button type="submit"   class="text-white bg-blue-800 rounded-lg hover:bg-gray-900 tracking-wide text-sm px-2 py-2.5 w-40  outline-none">Send</button>
+      </div>
+      
     </form>
     
   </div>
 </section>
 <!-- Contact Us section End -->
 
-<!-- Rating -->
+<!-- Rating 
 <div class="mt-2 flex justify-center items-center gap-x-2">
   <h3 class="text-gray-800">Was this page helpful?</h3>
   <button 
@@ -429,7 +545,7 @@
     No
   </button>
 </div>
-<!-- End Rating -->
+End Rating -->
 
 <!--footer section start-->
 <footer class="black-grad relative">
@@ -440,11 +556,21 @@
           <a href="#"><img src="public/logo.png" alt="Logo" class="h-24 w-auto logo-animation"></a>
         </div>
         <p class="text-base font-semibold">We provide a global platform for customers to explore and invest in properties worldwide with more than 25 years of experience and a focus on innovation and user experience.</p>
-        <div class="flex mt-5 gap-2">
-          <img src="/social_media/logo1.svg" alt="" class="hover:cursor-pointer">
-          <img src="/social_media/logo2.svg" alt="" class="hover:cursor-pointer">
-          <img src="/social_media/logo3.svg" alt="" class="hover:cursor-pointer">
-          <img src="/social_media/logo4.svg" alt="" class="hover:cursor-pointer">
+        <div class="social-menu">
+          <div class="flex mt-5 gap-4">
+            <img src="/social_media/logo1.svg" 
+                 alt="twitter_logo" 
+                 class="hover:cursor-pointer hover:brightness-110 hover:shadow-[0_0_15px_#00BFFF] transition duration-300 rounded-full p-2">
+            <img src="/social_media/logo2.svg" 
+                 alt="instagram_logo" 
+                 class="hover:cursor-pointer hover:brightness-110 hover:shadow-[0_0_15px_#FF1493] transition duration-300 rounded-full p-2">
+            <img src="/social_media/logo3.svg" 
+                 alt="google_logo" 
+                 class="hover:cursor-pointer hover:brightness-110 hover:shadow-[0_0_15px_#FF4500] transition duration-300 rounded-full p-2">
+            <img src="/social_media/logo4.svg" 
+                 alt="linkedin_logo" 
+                 class="hover:cursor-pointer hover:brightness-110 hover:shadow-[0_0_15px_#2563eb] transition duration-300 rounded-full p-2">
+          </div>
         </div>
       </div>
 
@@ -500,10 +626,11 @@
 </body>
 <!--footer section end-->
 
-<script type="module" src="/main.js"></script>
+<script type="module" src="./main.js"></script>
+
 <!--<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2025/01/14/13/20250114133150-A672388E.js"></script>-->
-
+<script type="module" src="./database/contact-form.js"></script>
 <!-- Custom Chat Bot -->
 <script>
 (function()

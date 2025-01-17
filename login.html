@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./main.css">
     <link rel="website icon" href="./public/logo2.png" type="png">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/c0e27fec68.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css">
     <title>Login</title>
     
@@ -33,29 +32,32 @@
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
+        
+        /* .social-menu img:hover{
+          color: #fff;
+        } */
     </style>
-
+<script src="./login.js" type="module" defer ></script>
 </head>
 
 <body>
-    <!--nav bar start-->
-  <!--desktop version-->
-    <nav class="bg-[#2B2B2B] sticky top-0 nav-animation">
-      <div class="px-5 max-w-[1200px] mx-auto  text-[#C4C4C4] hidden h-20 items-center justify-between lg:flex cursor-pointer">
-        <div class="text-[20px] font-bold flex items-center gap-9">
-          <a href="#"><img src="public/logo.png" alt="Logo" class="h-24 w-auto logo-animation"></a>
-        </div>
-        <ul class="flex justify-center items-center gap-20 text-base font-bold text-[#C4C4C4] flex-grow">
-          <li class="hover:border-white border-b-2 border-transparent"><a href="index.html">Home</a></li>
-            <li class="hover:border-white border-b-2 border-transparent"><a href="#Services">Services</a></li>
-            <li class="hover:border-white border-b-2 border-transparent"><a href="#Team">Find a Team</a></li>
-            <li class="hover:border-white border-b-2 border-transparent"><a href="#About Us">About Us</a></li>
-            <li class="hover:border-white border-b-2 border-transparent"><a href="#Articles">Articles</a></li>
-            <li class="hover:border-white border-b-2 border-transparent"><a href="#Contact Us">Contact Us</a></li>
-          </ul>
+  <nav class="bg-[#2B2B2B] sticky top-0 nav-animation">
+    <div class="px-5 max-w-[1200px] mx-auto  text-[#C4C4C4] hidden h-20 items-center justify-between lg:flex cursor-pointer">
+      <!--<div class="text-[20px] font-bold  gap-9 ">Logo</div>-->
+      <div class="text-[20px] font-bold flex items-center gap-9">
+        <a href="index.html"><img src="public/logo.png" alt="Logo" class="h-24 w-auto logo-animation"></a>
       </div>
-      <!--desktop version-->
-    </nav>
+      <ul class="flex justify-center items-center gap-20 text-base font-bold text-[#C4C4C4] flex-grow ml-80">
+        <li class="hover:border-white border-b-2 border-transparent"><a href="index.html">Home</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Services">Services</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Team">Find a Team</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#About Us">About Us</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Articles">Articles</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Contact Us">Contact Us</a></li>
+        </ul>
+    </div>
+     <!--desktop version-->
+   </nav>
 
 <!--mobile version-->
 <nav class="bg-[#2B2B2B] text-white h-10 p-5 flex justify-between items-center lg:hidden navigation-menu nav-animation">
@@ -80,26 +82,27 @@
  <!--mobile version-->
 
   <!--nav bar end-->
+  <div>
     <div class='login-outer-container'>
         <div class='login-container'>
             <div class='login-area'>
-                <h3>LOGIN TO REAL ESTATE SITE</h3>
-                <form class='login-items'>
+                <h3 class="font-bold">LOGIN TO REAL ESTATE SITE</h3>
+                <form class='login-items' id="loginForm">
                     <label htmlFor="username">Email</label>
-                    <input type="email" class='login' name="email" placeholder='your-email@gmail.com' required />
+                    <input type="email" id="email" class='login' name="email" placeholder='your-email@gmail.com' required />
                     <label htmlFor="password">Password</label>
-                    <input type="password" class='login' name="password" placeholder="Your Password" required />
-                    <input type="submit" class='login-btn' value="Login" />
+                    <input type="password" class='login' name="password" id="password" placeholder="Your Password" required />
+                    <button type="submit" id="submit" class='login-btn hover:bg-orange-300 '>Login</button>
                 </form>
-                <p class='p'>New to Rimberio? <a class='a' href="register.html">Create an Account</a></p>
-                <p class='p'>Forgot password? <a href="#" class='a'>Reset Password</a></p>
-                <div class='social-login-container'>
+                <p class='p'>New to this site? <a class='a' href="register.html">Create an Account</a></p>
+                <p class='p'>Forgot password? <a href="#"  id="resetPasswordLink">Reset Password</a></p>
+                  <div class='social-login-container'>
                     <p class='prompt'>or</p>
-                    <div class='social-login'>
-                        <button class='google-signin'><i class="fa-brands fa-google"></i> Login with Google</button>
-                        <button class='github-signin'><i class="fa-brands fa-github"></i>Login with Github</button>
-                    </div>
-                </div>
+                      <div class='social-login'>
+                        <button class='google-signin'><i class="fa-brands fa-google"></i> Login with Google<button>
+                        <button class='github-signin '><i class="fa-brands fa-github"></i>Login with Github</button>
+                      </div>
+                  </div>
             </div>
         </div>
     </div>
@@ -113,12 +116,23 @@
             <a href="#"><img src="public/logo.png" alt="Logo" class="h-24 w-auto logo-animation"></a>
           </div>
           <p class="text-base font-semibold">We provide a global platform for customers to explore and invest in properties worldwide with more than 25 years of experience and a focus on innovation and user experience.</p>
-          <div class="flex mt-5 gap-2">
-            <img src="/social_media/logo1.svg" alt="" class="hover:cursor-pointer">
-            <img src="/social_media/logo2.svg" alt="" class="hover:cursor-pointer">
-            <img src="/social_media/logo3.svg" alt="" class="hover:cursor-pointer">
-            <img src="/social_media/logo4.svg" alt="" class="hover:cursor-pointer">
+          <div class="social-menu">
+            <div class="flex mt-5 gap-4">
+              <img src="/social_media/logo1.svg" 
+                   alt="twitter_logo" 
+                   class="hover:cursor-pointer hover:brightness-110 hover:shadow-[0_0_15px_#00BFFF] transition duration-300 rounded-full p-2">
+              <img src="/social_media/logo2.svg" 
+                   alt="instagram_logo" 
+                   class="hover:cursor-pointer hover:brightness-110 hover:shadow-[0_0_15px_#FF1493] transition duration-300 rounded-full p-2">
+              <img src="/social_media/logo3.svg" 
+                   alt="google_logo" 
+                   class="hover:cursor-pointer hover:brightness-110 hover:shadow-[0_0_15px_#FF4500] transition duration-300 rounded-full p-2">
+              <img src="/social_media/logo4.svg" 
+                   alt="linkedin_logo" 
+                   class="hover:cursor-pointer hover:brightness-110 hover:shadow-[0_0_15px_#2563eb] transition duration-300 rounded-full p-2">
+            </div>
           </div>
+          
         </div>
   
         <div class="flex justify-between items-start gap-16">
@@ -171,7 +185,9 @@
     </div>
   </footer>
   <!--footer section end-->
-  <script src="./index.js" type="module" ></script>
+  
+  <script src="./database/contact-form.js" type="module"></script>
+  <script src="./auth/login.js" type="module"></script>
   <script>
     (function()
     {

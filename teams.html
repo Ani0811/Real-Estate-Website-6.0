@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teams</title>
+    <title>Our Teams</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./main.css">
     <link rel="website icon" href="./public/logo2.png" type="png">
@@ -17,12 +17,19 @@
             <a href="index.html"><img src="public/logo.png" alt="Logo" class="h-24 w-auto logo-animation"></a>
           </div>
           <ul class="flex justify-center items-center gap-20 text-base font-bold text-[#C4C4C4] flex-grow">
-            <li class="hover:border-white border-b-2 border-transparent"><a href="#">Home</a></li>
+            <li class="hover:border-white border-b-2 border-transparent"><a href="index.html">Home</a></li>
               <li class="hover:border-white border-b-2 border-transparent"><a href="#Services">Services</a></li>
               <li class="hover:border-white border-b-2 border-transparent"><a href="#Team">Find a Team</a></li>
               <li class="hover:border-white border-b-2 border-transparent"><a href="#About Us">About Us</a></li>
               <li class="hover:border-white border-b-2 border-transparent"><a href="#Articles">Articles</a></li>
               <li class="hover:border-white border-b-2 border-transparent"><a href="#Contact Us">Contact Us</a></li>
+            </ul>
+            <div class="ml-auto">
+                <button class="bg-[#007BFF] hover:bg-[#0056b3] text-white font-bold py-2 px-6 rounded"
+                  onclick="location.href='login.html'">
+                  Login
+                </button>
+              </div>
         </div>
          <!--desktop version-->
        </nav>
@@ -61,152 +68,159 @@
     </div>
 
     <div class="grid lg:grid-cols-4 md:grid-cols-3 gap-6 max-md:justify-center md:items-center mt-12">
-        <div class="border rounded-lg overflow-hidden">
-            <img src="public/teams/Ani.png" class="w-28 h-28 rounded-full object-cover" />
-            <br>
-            <div class="p-4">
-                <h4 class="text-gray-800 text-base font-bold">Anirudha Basu Thakur</h4>
-                <p class="text-gray-800 text-xs mt-1">Software Engineer</p>
-
-                <div class="space-x-4 mt-4">
-                    <button type="button"
-                        class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-blue-600 hover:bg-blue-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 155.139 155.139">
-                            <path
-                                d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z"
-                                data-original="#010002" />
-                        </svg>
-                    </button>
-                    <button type="button"
-                        class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#03a9f4] hover:bg-[#03a1f4]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 512 512">
-                            <path
-                                d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"
-                                data-original="#03a9f4" />
-                        </svg>
-                    </button>
-                    <button type="button"
-                        class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#0077b5] hover:bg-[#0055b5]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 24 24">
-                            <path
-                                d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z"
-                                data-original="#0077b5" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
+        <!-- Team Member 1 -->
+        <div class="border rounded-lg overflow-hidden flex flex-col items-center p-4">
+          <img
+            src="public/teams/Ani.png"
+            alt="Anirudha Basu Thakur"
+            class="w-28 h-28 rounded-full object-cover border-2 border-gray-300"
+          />
+          <div class="text-center mt-4">
+            <h4 class="text-gray-800 text-base font-bold">Anirudha Basu Thakur</h4>
+            <p class="text-gray-800 text-xs mt-1">Software Engineer</p>
+          </div>
+          <div class="space-x-4 mt-4">
+            <button type="button" class="w-6 h-6 inline-flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 155.139 155.139">
+                <path d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z" />
+              </svg>
+            </button>
+            <button type="button" class="w-6 h-6 inline-flex items-center justify-center rounded-full bg-[#03a9f4] hover:bg-[#03a1f4]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 512 512">
+                <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" />
+              </svg>
+            </button>
+            <button type="button" class="w-6 h-6 inline-flex items-center justify-center rounded-full bg-[#0077b5] hover:bg-[#0055b5]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 24 24">
+                <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z" />
+              </svg>
+            </button>
+          </div>
         </div>
+      
+      
 
-        <div class="border rounded-lg overflow-hidden">
-            <img src="public/teams/Vasudev.png" class="w-28 h-28 rounded-full object-cover" />
-            <br>
-            <div class="p-4">
-                <h4 class="text-gray-800 text-base font-bold">Vasudev Sharma</h4>
-                <p class="text-gray-800 text-xs mt-1">Technical Analyst</p>
-
-                <div class="space-x-4 mt-4">
-                    <button type="button"
-                        class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-blue-600 hover:bg-blue-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 155.139 155.139">
-                            <path
-                                d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z"
-                                data-original="#010002" />
-                        </svg>
-                    </button>
-                    <button type="button"
-                        class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#03a9f4] hover:bg-[#03a1f4]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 512 512">
-                            <path
-                                d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"
-                                data-original="#03a9f4" />
-                        </svg>
-                    </button>
-                    <button type="button"
-                        class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#0077b5] hover:bg-[#0055b5]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 24 24">
-                            <path
-                                d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z"
-                                data-original="#0077b5" />
-                        </svg>
-                    </button>
-                </div>
+        <!-- Team Member 1 -->
+        <div class="border rounded-lg overflow-hidden flex flex-col items-center p-4">
+            <img
+              src="public/teams/Vasudev.png"
+              alt="Anirudha Basu Thakur"
+              class="w-28 h-28 rounded-full object-cover border-2 border-gray-300"
+            />
+            <div class="text-center mt-4">
+              <h4 class="text-gray-800 text-base font-bold">Vasudev Sharma</h4>
+              <p class="text-gray-800 text-xs mt-1">Technical Analyst</p>
             </div>
-        </div>
-
-        <div class="border rounded-lg overflow-hidden">
-            <img src="public/teams/Arnab.jpeg" class="w-28 h-28 rounded-full object-cover" />
-            <br>
-            <div class="p-4">
-                <h4 class="text-gray-800 text-base font-bold">Arnab Roy</h4>
-                <p class="text-gray-800 text-xs mt-1">Web Designer</p>
-
-                <div class="space-x-4 mt-4">
-                    <button type="button"
-                        class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-blue-600 hover:bg-blue-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 155.139 155.139">
-                            <path
-                                d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z"
-                                data-original="#010002" />
-                        </svg>
-                    </button>
-                    <button type="button"
-                        class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#03a9f4] hover:bg-[#03a1f4]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 512 512">
-                            <path
-                                d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"
-                                data-original="#03a9f4" />
-                        </svg>
-                    </button>
-                    <button type="button"
-                        class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#0077b5] hover:bg-[#0055b5]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 24 24">
-                            <path
-                                d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z"
-                                data-original="#0077b5" />
-                        </svg>
-                    </button>
-                </div>
+            <div class="space-x-4 mt-4">
+              <button type="button" class="w-6 h-6 inline-flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 155.139 155.139">
+                  <path d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z" />
+                </svg>
+              </button>
+              <button type="button" class="w-6 h-6 inline-flex items-center justify-center rounded-full bg-[#03a9f4] hover:bg-[#03a1f4]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 512 512">
+                  <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" />
+                </svg>
+              </button>
+              <button type="button" class="w-6 h-6 inline-flex items-center justify-center rounded-full bg-[#0077b5] hover:bg-[#0055b5]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 24 24">
+                  <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z" />
+                </svg>
+              </button>
             </div>
-        </div>
+          </div>
+          
 
-        <div class="border rounded-lg overflow-hidden">
-            <img src="public/teams/Kanti.jpg" class="w-28 h-28 rounded-full object-cover" />
-            <br>
-            <div class="p-4">
-                <h4 class="text-gray-800 text-base font-bold">Arnab Kanti Das</h4>
-                <p class="text-gray-800 text-xs mt-1">GUI Developer</p>
-
-                <div class="space-x-4 mt-4">
-                    <button type="button"
-                        class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-blue-600 hover:bg-blue-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 155.139 155.139">
-                            <path
-                                d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z"
-                                data-original="#010002" />
-                        </svg>
-                    </button>
-                    <button type="button"
-                        class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#03a9f4] hover:bg-[#03a1f4]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 512 512">
-                            <path
-                                d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"
-                                data-original="#03a9f4" />
-                        </svg>
-                    </button>
-                    <button type="button"
-                        class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#0077b5] hover:bg-[#0055b5]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 24 24">
-                            <path
-                                d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z"
-                                data-original="#0077b5" />
-                        </svg>
-                    </button>
-                </div>
+          <div class="border rounded-lg overflow-hidden flex flex-col items-center p-4">
+            <!-- Centered image with border -->
+            <img 
+              src="public/teams/Arnab.jpeg" 
+              class="w-28 h-28 rounded-full object-cover border-2 border-gray-300" 
+            />
+            
+            <!-- Details Section -->
+            <div class="text-center mt-4">
+              <h4 class="text-gray-800 text-base font-bold">Arnab Roy</h4>
+              <p class="text-gray-800 text-xs mt-1">Web Designer</p>
             </div>
-        </div>
+          
+            <!-- Social Media Icons -->
+            <div class="space-x-4 mt-4">
+              <button 
+                type="button" 
+                class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-blue-600 hover:bg-blue-700"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 155.139 155.139">
+                  <path d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z" />
+                </svg>
+              </button>
+              <button 
+                type="button" 
+                class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#03a9f4] hover:bg-[#03a1f4]"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 512 512">
+                  <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" />
+                </svg>
+              </button>
+              <button 
+                type="button" 
+                class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#0077b5] hover:bg-[#0055b5]"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 24 24">
+                  <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          
+
+          <div class="border rounded-lg overflow-hidden flex flex-col items-center p-4">
+            <!-- Centered image with border -->
+            <img 
+              src="public/teams/Kanti.jpg" 
+              class="w-28 h-28 rounded-full object-cover border-2 border-gray-300" 
+            />
+            
+            <!-- Details Section -->
+            <div class="text-center mt-4">
+              <h4 class="text-gray-800 text-base font-bold">Arnab Kanti Das</h4>
+              <p class="text-gray-800 text-xs mt-1">GUI Developer</p>
+            </div>
+          
+            <!-- Social Media Icons -->
+            <div class="space-x-4 mt-4">
+              <button 
+                type="button" 
+                class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-blue-600 hover:bg-blue-700"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 155.139 155.139">
+                  <path d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z" />
+                </svg>
+              </button>
+              <button 
+                type="button" 
+                class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#03a9f4] hover:bg-[#03a1f4]"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 512 512">
+                  <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" />
+                </svg>
+              </button>
+              <button 
+                type="button" 
+                class="w-6 h-6 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#0077b5] hover:bg-[#0055b5]"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14px" fill="#fff" viewBox="0 0 24 24">
+                  <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          
     </div>
 </div>
 </div>
+
+<br><br><br>
       <!--footer section start-->
 <footer class="black-grad relative">
     <div class="text-white p-5 lg:max-w-[1200px] lg:mx-auto">
@@ -216,11 +230,21 @@
             <a href="#"><img src="public/logo.png" alt="Logo" class="h-24 w-auto logo-animation"></a>
           </div>
           <p class="text-base font-semibold">We provide a global platform for customers to explore and invest in properties worldwide with more than 25 years of experience and a focus on innovation and user experience.</p>
-          <div class="flex mt-5 gap-2">
-            <img src="/social_media/logo1.svg" alt="" class="hover:cursor-pointer">
-            <img src="/social_media/logo2.svg" alt="" class="hover:cursor-pointer">
-            <img src="/social_media/logo3.svg" alt="" class="hover:cursor-pointer">
-            <img src="/social_media/logo4.svg" alt="" class="hover:cursor-pointer">
+          <div class="social-menu">
+            <div class="flex mt-5 gap-4">
+              <img src="/social_media/logo1.svg" 
+                   alt="twitter_logo" 
+                   class="hover:cursor-pointer hover:brightness-110 hover:shadow-[0_0_15px_#00BFFF] transition duration-300 rounded-full p-2">
+              <img src="/social_media/logo2.svg" 
+                   alt="instagram_logo" 
+                   class="hover:cursor-pointer hover:brightness-110 hover:shadow-[0_0_15px_#FF1493] transition duration-300 rounded-full p-2">
+              <img src="/social_media/logo3.svg" 
+                   alt="google_logo" 
+                   class="hover:cursor-pointer hover:brightness-110 hover:shadow-[0_0_15px_#FF4500] transition duration-300 rounded-full p-2">
+              <img src="/social_media/logo4.svg" 
+                   alt="linkedin_logo" 
+                   class="hover:cursor-pointer hover:brightness-110 hover:shadow-[0_0_15px_#2563eb] transition duration-300 rounded-full p-2">
+            </div>
           </div>
         </div>
   
@@ -276,6 +300,37 @@
 </body>
   <!--footer section end-->
 <script type="module" src="/main.js"></script>
-<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2025/01/14/13/20250114133150-A672388E.js"></script>
+<script>
+  (function()
+  {
+    if(!window.chatbase || window.chatbase("getState")!=="initialized")
+    {
+      window.chatbase = (...arguments) => 
+    {
+      if(!window.chatbase.q)
+      {
+        window.chatbase.q=[]
+      }
+      window.chatbase.q.push(arguments)};
+      window.chatbase = new Proxy(window.chatbase,{get(target,prop)
+      {
+        if(prop==="q") { return target.q }
+        return(...args) => target(prop,...args)}})}
+        const onLoad=function()
+        {
+          const script=document.createElement("script");
+          script.src="https://www.chatbase.co/embed.min.js";
+          script.id="ldSHwULEIWts3WHesnyo7";
+          script.domain="www.chatbase.co";
+          document.body.appendChild(script)};
+          if(document.readyState==="complete")
+          {
+            onLoad()
+          }
+          else
+          {
+            window.addEventListener("load",onLoad)
+          }})
+          ();
+  </script>
 </html>

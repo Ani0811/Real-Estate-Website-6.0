@@ -35,45 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
   animateValue("awards", 0, 20, 2000);
 });
 
-// Popup functionality
-const contactForm = document.getElementById("contactForm");
-const contactModal = document.getElementById("contactModal");
-const closeModal = document.getElementById("closeModal");
-
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault(); // Prevent form from submitting
-
-  // Create form data object
-  const formData = new FormData(contactForm);
-
-  // Send form data to the server using Fetch
-  fetch("submit_form.php", {
-    method: "POST",
-    body: formData,
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.status === "success") {
-        // Set modal content
-        document.getElementById("modalName").textContent = data.name;
-        document.getElementById("modalEmail").textContent = data.email;
-        document.getElementById("modalMessage").textContent = data.message;
-
-        // Show modal
-        contactModal.classList.remove("hidden");
-      } else {
-        alert("Error: " + data.message);
-      }
-    })
-    .catch((error) => {
-      alert("There was an error submitting your form. Please try again." + error);
-    });
-});
-
-// Close modal when 'X' is clicked
-closeModal.addEventListener("click", () => {
-  contactModal.classList.add("hidden");
-});
 
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("nav ul li a");
@@ -110,47 +71,31 @@ document.addEventListener('DOMContentLoaded', function()
       });
     }
 });
-const yesButton = document.getElementById('yesButton');
-const noButton = document.getElementById('noButton');
-const yesIcon = document.getElementById('yesIcon');
-const noIcon = document.getElementById('noIcon');
 
-// Define resetFeedback function
-function resetFeedback() {
-  yesIcon.classList.remove('text-green-500');
-  noIcon.classList.remove('text-red-500');
+// On page load, check login status
+document.addEventListener('DOMContentLoaded', function () 
+{
+  const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+  if(isLoggedIn == 'true')
+  {
+      // Show Logout button and hide Login button
+      document.getElementById('logOutButton').classList.remove('hidden');
+      document.getElementById('loginButton').classList.add('hidden');
+  }
+  else
+  {
+      //Show Login button and hide Logout Button
+      document.getElementById('loginButton').classList.remove('hidden');
+      document.getElementById('logoutButton').classList.add('hidden');
+  }
+});
+
+//Logout function
+function logout()
+{
+    localStorage.removeItem('isLoggedIn');
+
+    //Redirect to home page
+    window.location.href = 'index.html';
 }
-
-// Handle Yes Button Click
-yesButton.addEventListener('click', () => {
-  // Reset previous styles
-  resetFeedback();
-  // Change icon color to green
-  yesIcon.classList.add('text-green-500');
-  // Show Toastify success message
-  Toastify({
-    text: "Thank you for your feedback!",
-    duration: 3000,
-    gravity: "top",
-    position: "center",
-    backgroundColor: "green",
-    className: "rounded"
-  }).showToast();
-});
-
-// Handle No Button Click
-noButton.addEventListener('click', () => {
-  // Reset previous styles
-  resetFeedback();
-  // Change icon color to red
-  noIcon.classList.add('text-red-500');
-  // Show Toastify error message
-  Toastify({
-    text: "We will definitely improve on our services.",
-    duration: 3000,
-    gravity: "top",
-    position: "center",
-    backgroundColor: "red",
-    className: "rounded"
-  }).showToast();
-});
