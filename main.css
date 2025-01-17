@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blue-grad {
+    background: linear-gradient(97.65deg, #60bbee 0.33%, #0a72ad 93.35%);
+  }
+  
+  .blue-grad-2 {
+    background: linear-gradient(
+      97.73deg,
+      #399fd8 -6.96%,
+      #0775b4 23.5%,
+      #003756 92.79%
+    );
+  }
+  
+  .black-grad {
+    background: linear-gradient(219.84deg, #474747 4.14%, #222222 44.22%);
+  }
+
+  .logo-animation {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .logo-animation:hover {
+    transform: scale(1.1) rotate(10deg);
+  }
+  
+  @keyframes navSlideIn {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .nav-animation {
+    animation: navSlideIn 0.5s ease-in-out;
+  }
+  
+  .navBar-menu {
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .navBar-menu.hide {
+    max-height: 0;
+  }
+  
+  .navBar-menu.show {
+    max-height: 500px; /* Adjust as needed */
+  }
+  
+  nav a.active {
+    color: #3a6515;
+    font-weight: bold;
+  }
+
+
+  /* .hero-text, .hero-description, .hero-button, .hero-image {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .hero-text:hover, .hero-description:hover, .hero-button:hover, .hero-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .hero-text.show, .hero-description.show, .hero-button.show, .hero-image.show {
+    opacity: 1;
+    transform: translateY(0);
+  } */
+
+  /* #clients, #projects, #awards {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#clients.fade-in, #projects.fade-in, #awards.fade-in {
+    opacity: 1;
+} */
+
+button:hover {
+  /* background-color: #1e40af;  */
+  /* Darker blue */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Add keyframes for animations */
+/* @keyframes slideIn {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+} */
+
+/* .brand-logo {
+  animation: slideIn 1s ease-out;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.brand-logo:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+} */
+
+
+
+/* Add keyframes for animations */
+/* @keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+} */
+
+/* Add this CSS to your stylesheet */
+/* .service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; 
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.1);
+}
+
+.service-card:hover h3, .service-card:hover p {
+  transform: scale(0.9) translateY(-10px);
+  transition: transform 0.3s ease;
+} */
+
+
+/* Add this CSS to your stylesheet */
+/* .what-makes-us-section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  border: 1px solid #e0e0e0; 
+  border-radius: 8px;
+   background-color: #fff; 
+}
+
+.what-makes-us-section:hover {
+  transform: scale(1.05);
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.what-makes-us-section img {
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
+}
+
+.what-makes-us-section:hover img {
+  transform: scale(1.1);
+}
+
+.what-makes-us-section:hover h3, .what-makes-us-section:hover p {
+  transform: scale(0.9) translateY(-10px);
+  transition: transform 0.3s ease;
+}*/

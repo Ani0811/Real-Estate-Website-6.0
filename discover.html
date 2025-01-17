@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover new properties | Real Estate website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="website icon" href="./public/logo2.png" type="png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css">
+</head>
+<body>
+    <!--nav bar start-->
+  <!--desktop version-->
+  <nav class="bg-[#2B2B2B] sticky top-0 nav-animation">
+    <div class="px-5 max-w-[1200px] mx-auto  text-[#C4C4C4] hidden h-20 items-center justify-between lg:flex cursor-pointer">
+      <!--<div class="text-[20px] font-bold  gap-9 ">Logo</div>-->
+      <div class="text-[20px] font-bold flex items-center gap-9">
+        <a href="index.html"><img src="public/logo.png" alt="Logo" class="h-24 w-auto logo-animation"></a>
+      </div>
+      <ul class="flex justify-center items-center gap-20 text-base font-bold text-[#C4C4C4] flex-grow">
+        <li class="hover:border-white border-b-2 border-transparent"><a href="index.html">Home</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#">Services</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#">Find a Team</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#">About Us</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#">Articles</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#">Contact Us</a></li>
+      </ul>
+      <!-- Login Button -->
+      <div class="ml-auto">
+        <button class="bg-[#007BFF] hover:bg-[#0056b3] text-white font-bold py-2 px-6 rounded"
+                onclick="location.href='login.html'">
+          Login
+        </button>
+      </div>
+    </div>
+     <!--desktop version-->
+   </nav>
+
+   <!--mobile version-->
+<nav class="bg-[#2B2B2B] text-white h-10 p-5 flex justify-between items-center lg:hidden navigation-menu nav-animation">
+    <div class="text-lg font-bold hover:border-white border-b-2 border-transparent">Logo</div>
+    <div class="navBar">
+        <div class="hamburger-menu" id="hamburger-menu">
+            <img src="🦆 icon _menu_.png" alt="Menu">
+        </div>
+        <div class="navBar-menu hide" id="navBar-menu">
+            <!-- Add your menu items here -->
+             <ul class="p-5 ">
+
+              <li class="hover:border-white border-b-2 border-transparent"><a href="index.html">Home</a></li>
+              <li class="hover:border-white border-b-2 border-transparent"><a href="#">Services</a></li>
+              <li class="hover:border-white border-b-2 border-transparent"><a href="#">Find a Team</a></li>
+              <li class="hover:border-white border-b-2 border-transparent"><a href="#">About Us</a></li>
+              <li class="hover:border-white border-b-2 border-transparent"><a href="#">Articles</a></li>
+              <li class="hover:border-white border-b-2 border-transparent"><a href="#">Contact Us</a></li>
+             </ul>
+             <!-- Login Button -->
+          <div class="ml-auto">
+            <button class="bg-[#007BFF] hover:bg-[#0056b3] text-white font-bold py-2 px-6 rounded"
+                    onclick="location.href='login.html'">
+              Login
+            </button>
+          </div>
+        </div>
+    </div>
+  </nav>
+     <!--mobile version-->
+  
+      <!--nav bar end-->
+
+<section class="p-5 md:bg-[#f8f8f8]">
+  <div class="container mx-auto px-4">
+    <h2 class="text-center font-medium md:text-4xl mb-6">Real Estate Services</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-lg shadow-md p-6 text-center text-white">
+        <img src="discover/agent.jpeg" alt="Agents / Brokers" class="mx-auto mb-4 w-40 h-40 rounded-lg">
+        <h5 class="text-lg font-semibold text-gray-800">Agents / Brokers</h5>
+        <p class="text-gray-600 mt-2 mb-4">Here are Hassle-Free Solutions: Buy - Sell - Rent Your Property.</p>
+        <br><button class="self-start text-base font-semibold py-1.5 bg-blue-500 px-3 mt-5 md:py-4 md:px-5 shadow-md shadow-cyan-400" >Read More</button>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-lg shadow-md p-6 text-center text-white">
+        <img src="discover/builder.jpeg" alt="Builders / Developers" class="mx-auto mb-4 w-40 h-40 rounded-lg">
+        <h5 class="text-lg font-semibold text-gray-800">Builders / Developers</h5>
+        <p class="text-gray-600 mt-2 mb-4">List of the most trusted and reliable builders to fulfill your Dream HOME.</p>
+        <button class="self-start text-base font-semibold py-1.5 bg-blue-500 px-3 mt-5 md:py-4 md:px-5 shadow-md shadow-cyan-400" >Read More</button>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white rounded-lg shadow-md p-6 text-center text-white">
+        <img src="discover/architect.jpeg" alt="Architects / Architecture" class="mx-auto w-40 h-40 rounded-lg">
+        <h5 class="text-lg font-semibold text-gray-800">Architects / Architecture</h5>
+        <p class="text-gray-600 mt-2 mb-4">Professional architecture will meet your needs and expectations.</p>
+        <br><button class="self-start text-base font-semibold py-1.5 bg-blue-500 px-3 mt-5 md:py-4 md:px-5 shadow-md shadow-cyan-400" >Read More</button>
+      </div>
+      <!-- Card 4 -->
+      <div class="bg-white rounded-lg shadow-md p-6 text-center text-white">
+        <img src="discover/interior.jpeg" alt="Interior Decorators" class="mx-auto mb-4 w-40 h-40 rounded-lg">
+        <h5 class="text-lg font-semibold text-gray-800">Interior Decorators</h5>
+        <p class="text-gray-600 mt-2 mb-4">A One-Stop Solution for all your decor matching your needed lifestyle.</p>
+        <button class="self-start text-base font-semibold py-1.5 bg-blue-500 px-3 mt-5 md:py-4 md:px-5 shadow-md shadow-cyan-400" >Read More</button>
+      </div>
+      <!-- Card 5 -->
+      <div class="bg-white rounded-lg shadow-md p-6 text-center text-white">
+        <img src="discover/vaastu.jpeg" alt="Interior Decorators" class="mx-auto mb-4 w-40 h-40 rounded-lg">
+        <h5 class="text-lg font-semibold text-gray-800">Vaastu Consultant</h5>
+        <p class="text-gray-600 mt-2 mb-4">Connect to top most consultants for right direction.</p>
+        <br><button class="self-start text-base font-semibold py-1.5 bg-blue-500 px-3 mt-5 md:py-4 md:px-5 shadow-md shadow-cyan-400" >Read More</button>
+      </div>
+      <!-- Card 6 -->
+      <div class="bg-white rounded-lg shadow-md p-6 text-center text-white">
+        <img src="discover/contractor.jpeg" alt="Interior Decorators" class="mx-auto mb-4 w-40 h-40 rounded-lg">
+        <h5 class="text-lg font-semibold text-gray-800">Building Contractors</h5>
+        <p class="text-gray-600 mt-2 mb-4">General contractor for a home repair, remodel or reconstruction.</p>
+        <br><button class="self-start text-base font-semibold py-1.5 bg-blue-500 px-3 mt-5 md:py-4 md:px-5 shadow-md shadow-cyan-400" >Read More</button>
+      </div>
+      <!-- Card 7 -->
+      <div class="bg-white rounded-lg shadow-md p-6 text-center text-white">
+        <img src="discover/inspection.jpeg" alt="Interior Decorators" class="mx-auto mb-4 w-40 h-40 rounded-lg">
+        <h5 class="text-lg font-semibold text-gray-800">Home Inspection</h5>
+        <p class="text-gray-600 mt-2 mb-4">A complete range of building and home inspection services.</p>
+        <br><button class="self-start text-base font-semibold py-1.5 bg-blue-500 px-3 mt-5 md:py-4 md:px-5 shadow-md shadow-cyan-400" >Read More</button>
+      </div>
+      <!-- Card 8 -->
+      <div class="bg-white rounded-lg shadow-md p-6 text-center text-white">
+        <img src="discover/consultant.jpeg" alt="Interior Decorators" class="mx-auto mb-4 w-40 h-40 rounded-lg">
+        <h5 class="text-lg font-semibold text-gray-800">Property Consultants</h5>
+        <p class="text-gray-600 mt-2 mb-4">List of leading real estate consultant for professional assistance services</p>
+        <button class="self-start text-base font-semibold py-1.5 bg-blue-500 px-3 mt-5 md:py-4 md:px-5 shadow-md shadow-cyan-400" >Read More</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-5 md:bg-[#f8f8f8]">
+  <div class="container mx-auto py-4">
+    <h2 class="text-3xl font-semibold text-center mb-8">Insights and Tools</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <!-- Grid Item 1 -->
+          <div class="bg-white p-6 shadow-md rounded-lg text-center">
+            <img src="discover/location.jpeg" alt="Top Residential Localities" class="mx-auto mb-4 w-40 h-40 rounded-lg">
+              <h3 class="text-lg font-bold text-gray-800">Top Residential Localities</h3>
+              <p class="text-gray-600 mt-2">Planning to buy property in a posh locality? Here are some of the top locations with verified residential properties.</p>
+              <br><button class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
+                  Explore Now ->
+              </button>
+          </div>
+
+          <!-- Grid Item 2 -->
+          <div class="bg-white p-6 shadow-md rounded-lg text-center">
+            <img src="discover/ratings.png" alt="Top Agents and Brokers" class="mx-auto mb-4 w-40 h-40 rounded-lg">
+              <h3 class="text-lg font-bold text-gray-800">Top Agents and Brokers</h3>
+              <p class="text-gray-600 mt-2">Find details of verified real agents to get an entire range of property listings by top agents & consultants.</p>
+              <br><button class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
+                  Explore Now ->
+              </button>
+          </div>
+
+          <!-- Grid Item 3 -->
+          <div class="bg-white p-6 shadow-md rounded-lg text-center">
+            <img src="discover/news.jpeg" alt="Latest Real Estate News, Views & Updates" class="mx-auto mb-4 w-40 h-40 rounded-lg">
+              <h3 class="text-lg font-bold text-gray-800">Latest Real Estate News, Views & Updates</h3>
+              <p class="text-gray-600 mt-2">Stay updated with the latest news on real estate market, updates on residential & commercial property.</p>
+              <br><button class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
+                  Explore Now ->
+              </button>
+          </div>
+
+          <!-- Grid Item 4 -->
+          <div class="bg-white p-6 shadow-md rounded-lg text-center">
+            <img src="discover/leads.png" alt="Generating Real Estate Leads" class="mx-auto mb-4 w-40 h-40 rounded-lg">
+              <h3 class="text-lg font-bold text-gray-800">Generating Real Estate Leads</h3>
+              <p class="text-gray-600 mt-2">Acquire 100% authentic real-estate leads and effortlessly connect with a large number of customers.</p>
+              <br><button class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
+                  Explore Now ->
+              </button>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+<main>
+  <section class="p-5 md:bg-[#f8f8f8]">
+    <div class=" text-black flex flex-col  gap-4 md:flex-row md:items-end md:gap-10 max-w-[1200px] mx-auto">
+        <!-- Hero Text Section -->
+      <div class="flex flex-col pt-20 px-5 gap-2 md:pb-20">
+        <h1 class="text-center text-xl font-medium md:text-4xl">
+          An Overview of the Real Estate Market
+        </h1>      
+        <p id="text-section" class="text-gray-800 text-base max-w-[35rem]">
+          The real estate market is a dynamic sector that reflects the economic growth and societal trends of a region. With increasing urbanization and demand for modern infrastructure, the market offers a variety of residential, commercial, and industrial properties.
+        <span id="more-text" class="hidden">
+        Investors are drawn to real estate for its potential to generate significant returns, while buyers appreciate the variety and customization options available. Economic policies, interest rates, and regional growth drive market trends, making it essential to stay informed for strategic decision-making.
+        </span>
+        </p>
+        <a id="read-more-link" href="#" class="text-indigo-600 font-light">Read More</a>
+      </div>
+  </div>
+</div>
+</main>
+
+<!--footer section start-->
+<footer class="black-grad relative">
+  <div class="text-white p-5 lg:max-w-[1200px] lg:mx-auto">
+    <div class="flex flex-col lg:flex-row lg:gap-[180px] lg:py-9 lg:max-w-[1200px] mx-auto lg:items-baseline">
+      <div class="flex flex-col gap-4 lg:max-w-[550px]">
+        <div class="text-[20px] font-bold flex items-center gap-9">
+          <a href="#"><img src="public/logo.png" alt="Logo" class="h-24 w-auto logo-animation"></a>
+        </div>
+        <p class="text-base font-semibold">We provide a global platform for customers to explore and invest in properties worldwide with more than 25 years of experience and a focus on innovation and user experience.</p>
+        <div class="flex mt-5 gap-2">
+          <img src="/social_media/logo1.svg" alt="" class="hover:cursor-pointer">
+          <img src="/social_media/logo2.svg" alt="" class="hover:cursor-pointer">
+          <img src="/social_media/logo3.svg" alt="" class="hover:cursor-pointer">
+          <img src="/social_media/logo4.svg" alt="" class="hover:cursor-pointer">
+        </div>
+      </div>
+
+      <div class="flex justify-between items-start gap-16">
+
+        <!--Company Section-->
+          <div>
+            <h4 class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Company</h4>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">About Us</p>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Careers</p>
+          </div>
+          
+        <!-- More Section -->
+        <div>
+          <h4 class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">More</h4>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">For Investors</p>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Documentation</p>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">License</p>
+        </div>
+      
+        <!-- Support Section -->
+        <div>
+          <h4 class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Support</h4>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Help Center</p>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Contact Us</p>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">FAQs</p>
+        </div>
+      
+        <!-- Additional Section Example -->
+        <div>
+          <h4 class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Resources</h4>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Blog</p>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Tutorials</p>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Webinars</p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+
+    <div class="mt-10 text-center lg:">
+      <p class="text-md text-white">&copy; 2025 Your Company. All rights reserved.</p>
+    </div>
+
+    <div class="absolute bottom-8 right-32">
+      <a href="#" id="scrollToTop" class="bg-indigo-600 text-white p-4 rounded-lg shadow-lg hover:bg-indigo-700 transition-all">
+        <i class='bx bx-up-arrow-alt'></i>
+      </a>
+    </div>
+
+  </div>
+</footer>
+</body>
+  <!--footer section end-->
+  
+  
+
+  <!-- <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/01/14/13/20250114133150-A672388E.js"></script> -->
+
+  <script>
+    document.getElementById("read-more-link").addEventListener("click", function (event) 
+    {
+        event.preventDefault(); // Prevent link from redirecting
+        const dots = document.getElementById("dots");
+        const moreText = document.getElementById("more-text");
+        const link = document.getElementById("read-more-link");
+
+        if (moreText.classList.contains("hidden"))
+        {
+            moreText.classList.remove("hidden");
+            link.textContent = "Read Less";
+        } 
+        else 
+        {
+            moreText.classList.add("hidden");
+            link.textContent = "Read More";
+        }
+    });
+  </script>
+    <!-- Custom Chat Bot -->
+  <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="ldSHwULEIWts3WHesnyo7";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>    
+</html>

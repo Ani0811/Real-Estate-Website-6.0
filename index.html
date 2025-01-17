@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate property site</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="website icon" href="./public/logo2.png" type="png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js@1.11.2/src/toastify.css">
+    <script src="./node_modules/toastify-js/src/toastify.js"></script>
+
+  </head>
+  <body>
+ <!--nav bar start-->
+  <!--desktop version-->
+    <nav class="bg-[#2B2B2B] sticky top-0 nav-animation">
+      <div class="px-5 max-w-[1200px] mx-auto  text-[#C4C4C4] hidden h-20 items-center justify-between lg:flex cursor-pointer">
+        <!--<div class="text-[20px] font-bold  gap-9 ">Logo</div>-->
+        <div class="text-[20px] font-bold flex items-center gap-9">
+          <a href="#"><img src="public/logo.png" alt="Logo" class="h-24 w-auto logo-animation"></a>
+        </div>
+        <ul class="flex justify-center items-center gap-20 text-base font-bold text-[#C4C4C4] flex-grow">
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#">Home</a></li>
+            <li class="hover:border-white border-b-2 border-transparent"><a href="#Services">Services</a></li>
+            <li class="hover:border-white border-b-2 border-transparent"><a href="#Team">Find a Team</a></li>
+            <li class="hover:border-white border-b-2 border-transparent"><a href="#About Us">About Us</a></li>
+            <li class="hover:border-white border-b-2 border-transparent"><a href="#Articles">Articles</a></li>
+            <li class="hover:border-white border-b-2 border-transparent"><a href="#Contact Us">Contact Us</a></li>
+          </ul>
+           <!-- Login Button -->
+        <div class="ml-auto">
+          <button class="bg-[#007BFF] hover:bg-[#0056b3] text-white font-bold py-2 px-6 rounded"
+                  onclick="location.href='login.html'">
+            Login
+          </button>
+        </div>
+      </div>
+       <!--desktop version-->
+     </nav>
+
+<!--mobile version-->
+<nav class="bg-[#2B2B2B] text-white h-10 p-5 flex justify-between items-center lg:hidden navigation-menu nav-animation">
+  <div class="text-lg font-bold hover:border-white border-b-2 border-transparent">Logo</div>
+  <div class="navBar">
+      <div class="hamburger-menu" id="hamburger-menu">
+          <img src="🦆 icon _menu_.png" alt="Menu">
+      </div>
+      <div class="navBar-menu hide" id="navBar-menu">
+          <!-- Add your menu items here -->
+           <ul class="p-5 ">
+            <li class="hover:border-white border-b-2 border-transparent"><a href="#">Home</a></li>
+            <li class="hover:border-white border-b-2 border-transparent"><a href="#Services">Services</a></li>
+            <li class="hover:border-white border-b-2 border-transparent"><a href="#Team">Find a Team</a></li>
+            <li class="hover:border-white border-b-2 border-transparent"><a href="#About Us">About Us</a></li>
+            <li class="hover:border-white border-b-2 border-transparent"><a href="#Articles">Articles</a></li>
+            <li class="hover:border-white border-b-2 border-transparent"><a href="#Contact Us">Contact Us</a></li>
+           </ul>
+           <!-- Login Button -->
+        <div class="ml-auto">
+          <button class="bg-[#007BFF] hover:bg-[#0056b3] text-white font-bold py-2 px-6 rounded"
+                  onclick="location.href='login.html'">
+            Login
+          </button>
+        </div>
+      </div>
+  </div>
+</nav>
+   <!--mobile version-->
+
+    <!--nav bar end-->
+
+  <!--hero section start desktop-->
+
+   <main>
+    <section class="black-grad">
+      <div class=" text-white flex flex-col  gap-4 md:flex-row md:items-end md:gap-10 max-w-[1200px] mx-auto">
+          <!-- Hero Text Section -->
+        <div class="flex flex-col pt-20 px-5 gap-2 md:pb-20">
+          <h1 class="text-xl font-medium md:text-4xl" >We Provide <br>Architectural Design <br>& Construction</h1>
+  
+          <p class="text-[#C4C4C4] text-md max-w-[45rem] font-medium" style="width:400px"><br><br>
+            A global real estate platform, redefining customer engagement with property discovery and investment, focusing on innovation and seamless user experiences.
+          </p>
+          <button class="self-start text-base font-semibold py-1.5 bg-blue-500 px-3 mt-5 md:py-4 md:px-5 shadow-md shadow-cyan-400" 
+                  onclick="window.location.href='discover.html'">Discover More</button>
+
+
+         
+            <div class="md:flex  mt-8 justify-between hidden md:pt-6">
+              <div class="md:flex md:flex-col">
+                <h3 class="font-bold text-2xl" id="clients">0 <span class="text-blue-500 font-bold text-2xl">+</span></h3>
+                <p class="font-semibold text-base">Happy <br> Clients</p>
+              </div>
+              <div class="flex flex-col">
+                <h3 class="font-bold text-2xl" id="projects">0 <span class="text-blue-500 font-bold text-2xl">+</span></h3>
+                <p class="font-semibold text-base">Amazing<br> Projects</p>
+              </div>
+              <div class="md:flex md:flex-col">
+                <h3 class="font-bold text-2xl" id="awards">0 <span class="text-blue-500 font-bold text-2xl">+</span></h3>
+                <p class="font-semibold text-base">Award <br> Winnings</p>
+              </div>
+            </div>
+          </div>
+  
+         
+  
+  
+        <!-- Hero Image -->
+        <div>
+        <div class="flex justify-end -mt-32 ">
+          <picture>
+            <source media="(min-width: 765px)" srcset="/big_hero_image.png" />
+            <source media="(max-width: 768px)" srcset="/hero_building.png" />
+            <img src="/hero_building.png" alt="Small building" class="md:w-[500px]" />
+          </picture>
+        </div>
+
+
+        <section class="blue-grad-2 p-5 text-white  gap-12 flex-col md:flex hidden ">
+          <div class="flex justify-between gap-8">
+            <!--<div class="font-bold text-xl">Logo</div>-->
+            <div>
+              <div class="flex items-baseline">
+                <h2 class="font-bold text-3xl">25</h2>
+                <h2 class="font-medium text-lg ml-1">Years</h2>
+              </div>
+              <h3 class="font-semibold text-xl -mt-3">Operated</h3>
+            </div>
+            <p class="text-sm md:max-w-[400px] ">As a trusted general project that has been operating for 25 years, our commitment is always to prioritize our client satisfaction.</p>
+            
+          </div>
+         
+
+      </section>
+      </div>
+    </div>
+  </div>
+   <!--hero section end desktop-->
+   
+  <!--mobile version start-->
+    <section class="blue-grad-2 p-5 text-white flex flex-col gap-4 md:hidden">
+      <div class="flex justify-between ">
+        <div>
+          <div class="flex items-baseline">
+            <h2 class="font-bold text-3xl">25</h2>
+            <h2 class="font-medium text-lg ml-1">Years</h2>
+          </div>
+          <h3 class="font-semibold text-xl -mt-3">Operated</h3>
+        </div>
+        <div class="font-bold text-xl">Logo</div>
+      </div>
+      <p class="text-sm  ">As a trusted general project that has been operating for 25 years, our commitment is always to prioritize our client satisfaction.</p>
+
+      <div class="flex justify-between ">
+        <div >
+          <h3 class="font-bold text-xl" id="clients">0 +</h3>
+          <p class="font-semibold text-sm">Happy <br> Clients</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-xl" id="projects">0 +</h3>
+          <p class="font-semibold text-sm">Amazing<br> Projects</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-xl" id="awards">0 +</h3>
+          <p class="font-semibold text-sm">Award <br> Winnings</p>
+        </div>
+      </div>
+      
+    </section>
+  </section>
+
+  <!--stat section end-->
+
+
+
+<!--Brand Logo start-->
+<section class="h-[100px] flex gap-2 flex-row overflow-x-auto overflow-y-hidden items-center p-5 md:max-w-[1200px] md:mx-auto md:justify-between md:h-[200px] md:py-5">
+  <div class="h-20 grid place-content-center min-w-[7.5rem] brand-logo">
+    <img src="brand/logo_1.png" alt="">
+  </div>
+  <div class="h-20 grid place-content-center min-w-[7.5rem] brand-logo">
+    <img src="brand/logo_2.png" alt="" class="md:min-w-[8rem]">
+  </div>
+  <div class="h-20 grid place-content-center min-w-[7.5rem] brand-logo">
+    <img src="brand/logo_3.png" alt="" class="md:min-w-[8rem]">
+  </div>
+  <div class="h-20 grid place-content-center min-w-[7.5rem] brand-logo">
+    <img src="brand/logo_4.png" alt="" class="md:min-w-[8rem]">
+  </div>
+  <div class="h-20 grid place-content-center min-w-[7.5rem] brand-logo">
+    <img src="brand/logo_5.png" alt="" class="md:min-w-[8rem]">
+  </div>
+</section>
+<!--Brand Logo end-->
+
+  <!--services section start-->
+<section class="p-5 md:bg-[#f8f8f8]" id="Services">
+  <div class="p-5 md:max-w-[1200px] md:mx-auto ">
+    <div class="flex flex-col gap-2 text-center md:flex-row md:justify-between md:items-end md:mt-20">
+      <h2 class="font-bold text-xl md:text-4xl ">Our Excellent Services</h2>
+      <p class="font-medium text-base text-[#C4C4C4] md:max-w-[500px]">Check out our best services you can possibly order in building your company and don't forget to ask via our email or our customer service if you are interested in using our services</p>
+    </div>
+
+    <div class="flex gap-4 overflow-auto md:mt-20 p-5">
+      <div class="service-card flex flex-col gap-2 min-w-[16.25rem] md:gap-8">
+        <div>
+          <img src="services/services_1.png" alt="" class="shadow-md md:w-[370px] md:h-[270px]">
+        </div>
+        <h3 class="font-bold text-lg">Industrial</h3>
+        <p class="font-medium text-base text-[#C4C4C4]">Industrial development is our main line of business. We do Factory Construction, Warehouse and others</p>
+      </div>
+      <div class="service-card flex flex-col gap-2 min-w-[16.25rem] md:gap-8">
+        <div>
+          <img src="services/services_2.png" alt="" class="shadow-md md:w-[370px] md:h-[270px]">
+        </div>
+        <h3 class="font-bold text-lg">Commercial</h3>
+        <p class="font-medium text-base text-[#C4C4C4]">Industrial development is our main line of business. We do Factory Construction, Warehouse and others</p>
+      </div>
+      <div class="service-card flex flex-col gap-2 min-w-[16.25rem] md:gap-8">
+        <div class="service-card flex flex-col gap-2 min-w-[16.25rem] md:gap-8">
+  <div>
+    <img src="services/services_3.png" alt="" class="shadow-md md:w-[370px] md:h-[270px]">
+  </div>
+  <h3 class="font-bold text-lg">Residential</h3>
+  <p class="font-medium text-base text-[#C4C4C4]">Industrial development is our main line of business. We do Factory Construction, Warehouse and others</p>
+</div>
+    </div>
+  </div>
+</section>
+<!--//-->
+<section class="p-5 lg:max-w-[1200px] lg:mx-auto ">
+  <div class="flex flex-col gap-2 lg:gap-4">
+    <div class="h-1 w-[90px] blue-grad lg:h-2"></div>
+    <div class="lg:flex lg:justify-between lg:items-center">
+      <h2 class="font-bold text-xl lg:text-4xl ">What Makes Us <br> Different?</h2>
+      <p class="font-medium text-base text-[#C4C4C4] lg:max-w-[561px] lg:text-lg">Check out our best services you can possibly order in building your company and don't forget to ask via our email or our customer service if you are interested in using our services</p>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center text-center mt-10 gap-8 lg:flex-row lg:mx-auto lg:mt-20">
+    <div class="what-makes-us-section flex flex-col gap-2 min-w-[16.25rem] max-w-[14.625rem] items-center lg:items-start lg:text-start">
+      <div>
+        <img src="makesus/make_us_1.png" alt="">
+      </div>
+      <h3 class="font-bold text-lg mt-2">Experienced</h3>
+      <p class="font-medium text-base text-[#C4C4C4] min-h-[4.5rem]">Our experience of 25 years of building and making achievements in the world of development</p>
+    </div>
+    <div class="what-makes-us-section flex flex-col gap-2 min-w-[16.25rem] max-w-[14.625rem] items-center lg:items-start lg:text-start">
+      <div>
+        <img src="makesus/make_us_2.png" alt="">
+      </div>
+      <h3 class="font-bold text-lg mt-2">Competitive Price</h3>
+      <p class="font-medium text-base text-[#C4C4C4] min-h-[4.5rem]">The prices we offer you are very competitive without reducing the quality of the company's work in the slightest</p>
+    </div>
+    <div class="what-makes-us-section flex flex-col gap-2 min-w-[16.25rem] max-w-[14.625rem] items-center lg:items-start lg:text-start">
+      <div>
+        <img src="makesus/make_us_3.png" alt="">
+      </div>
+      <h3 class="font-bold text-lg mt-2">On Time</h3>
+      <p class="font-medium text-base text-[#C4C4C4] min-h-[4.5rem]">We prioritize the quality of our work and finish it on time</p>
+    </div>
+    <div class="what-makes-us-section flex flex-col gap-2 min-w-[16.25rem] max-w-[14.625rem] items-center lg:items-start lg:text-start">
+      <div>
+        <img src="makesus/make_us_1.png" alt="">
+      </div>
+      <h3 class="font-bold text-lg mt-2">Best Materials</h3>
+      <p class="font-medium text-base text-[#C4C4C4] min-h-[4.5rem]">The material determines the building itself so we recommend that you use the best & quality materials in its class.</p>
+    </div>
+  </div>
+  
+</section>
+<!--services section end-->
+
+
+  <!--Find a Team section start-->
+<section class="p-5 md:max-w-[1200px] md:mx-auto flex flex-col lg:flex-row" id="Team">
+  <div class="bg-team-bg-image h-[340px] bg-no-repeat bg-cover flex justify-center items-end mb-40 md:flex-1 md:mr-40 md:flex-col md:h-[500px]">
+    <div class="black-grad h-[250px] w-[250px] relative top-24 flex flex-col p-5 gap-2 items-center md:top-0 md:-right-24 n">
+      <div>
+        <img src="/teams/team_avatar.png" alt="" class="rounded-full ">
+      </div>
+      <h3 class="font-bold text-lg text-white">Dianne Russell</h3>
+      <p class="text-center text-base text-[#E5E5E5] font-medium">More than 20 years of experience in the fieldarchitecture and has worked on project up to 100+</p>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-2 md:justify-center md:flex-1 md:mb-48">
+    <h2 class="text-[#242527] font-bold text-xl md:text-3xl">Meet and talk with <br> our best architects</h2>
+    <p class="text-[#C4C4C4] font-medium text-base md:w-[400px] md:text-md md:leading-8">All our teams are professional and competent in their fields and will help you realize your dream building with the excellent result.</p>
+    <div class="flex justify-between mt-2 md:self-start md:items-center md:gap-12">
+      <button class="bg-[#0A72AD] text-white py-1.5 px-3 shadow-md shadow-cyan-400 md:py-4 md:px-8 md:text-center transition-transform duration-300 hover:scale-105"
+              onclick="window.location.href='teams.html'">See all teams</button>
+      <button class="font-bold text-md text-[#242527] flex gap-2 transition-transform duration-300 hover:scale-105"
+            onclick="window.location.href='how_it_works.html'">How it works 
+            <img src="/teams/arrow.png" class="pt-1 mt-1 transition-transform duration-300 hover:translate-x-2">
+          </button>
+    </div>
+  </div>
+</section>
+<!--Find a Team section end-->
+
+
+  <!--About Us section start-->
+<section class="p-4 md:max-w-[1200px] md:mx-auto" id="About Us">
+  <div class="flex flex-col gap-2 min-w-[16.25rem] md:flex-1 md:flex-row-reverse">
+    <div >
+      <img src="/Mask Group.png" alt="" class="shadow-md w-full md:max-w-[570px] md:border-8 md:border-white flex-1">
+    </div>
+    <div class="flex flex-col gap-4 flex-1 md:gap-8">
+      <h3 class="font-bold text-lg md:text-4xl md:font-bold">Our Story <br> Who we are</h3>
+      <p class="font-medium text-base text-[#C4C4C4] md:max-w-[500px]">Established in 1992, PT. Wahana Cipta operates as a General Contracting company with a footprint that we have planted throughout Indonesia. Initially, we focused on construction in the field of residential housing development in Jakarta. As the company grows, now we are present as a reliable...</p>
+      <button class="bg-[#0A72AD] text-white py-1.5 px-3 self-start shadow-md shadow-cyan-400 transition-transform duration-300 hover:scale-105" 
+              onclick="window.location.href='see_more.html'">See More</button>
+    </div>
+  </div>
+</section>
+<!--About Us section end-->
+
+<!--Articles section start-->
+<section class="p-5 md:max-w-[1200px] md:mx-auto md:gap-16 md:flex md:flex-col" id="Articles">
+  <h2 class="text-xl font-bold md:text-4xl md:gap-4">News & Updates</h2>
+  <div class="flex gap-4 overflow-x-hidden">
+    <div class="flex flex-col gap-4 min-w-[14rem] ">
+      <div>
+        <img src="news/news1.png" alt="" class="shadow-md w-full md:w-[300px] ">
+      </div>
+      <div class="flex gap-4">
+        <div><p class="font-bold text-lg leading-none">12</p><p class="text-base font-bold">Jan</p></div>
+        <h4 class="font-bold text-sm md:text-md">Elements of Content in  <br>Epoxy Paint</h4>
+      </div>
+      <p class="text-[#C4C4C4] font-medium text-sm md:text-base">Epoxy paint and epoxy floor contractor. Have you heard the two terms? And what does that have to do with the construction of existing buildings? Epoxy itself is included in the type of resin...<a href="https://example.com" class="text-[#0A72AD]">Read more</a></p>
+    </div>
+    <div class="flex flex-col gap-4 min-w-[14rem]">
+      <div>
+        <img src="news/news2.png" alt="" class="shadow-md w-full md:w-[300px] ">
+      </div>
+      <div class="flex gap-4">
+        <div><p class="font-bold text-lg leading-none">12</p><p class="text-base font-bold">Jan</p></div>
+        <h4 class="font-bold text-sm md:text-md">5 Right Steps in Warehouse  <br>Planning and Construction</h4>
+      </div>
+      <p class="text-[#C4C4C4] font-medium text-sm md:text-base">Planning the construction of a warehouse for both industrial, personal and other goods storage must be done carefully. When the planning is done properly, the construction is...<a href="https://example.com" class="text-[#0A72AD]">Read more</a></p>
+    </div>
+    <div class="flex flex-col gap-4 min-w-[14rem] md:self-center ">
+      <div>
+        <img src="news/news3.png" alt="" class="shadow-md w-full md:w-[300px] ">
+      </div>
+      <div class="flex gap-4">
+        <div><p class="font-bold text-lg leading-none">12</p><p class="text-base font-bold">Jan</p></div>
+        <h4 class="font-bold text-sm md:text-md">The Right Solution to Build a  Sturdy Type 45 House</h4>
+      </div>
+      <p class="text-[#C4C4C4] font-medium text-sm md:text-base">Having a solid home is certainly everyone's dream. How not, the house is a place where the residents can rest and take shelter from the bad weather... <a href="https://example.com" class="text-[#0A72AD]">Read more</a></p>
+    </div>
+  </div>
+</section>
+<!--Articles section end-->        
+
+
+
+<!--project section start//-->
+<section class="p-5 flex flex-col gap-8 md:max-w-[1200px] md:mx-auto md:gap-24">
+  <h2 class="text-xl font-bold text-[#242527] md:text-4xl">Our collection <br> of best projects</h2>
+  <div class="grid grid-cols-2 gap-5 md:grid-cols-4">
+    <picture >
+      <source media="(min-width: 768px)" srcset="/projects_big/project_big_1.png" />
+      <source media="(max-width: 800px)" srcset="/projects/project1.png" />
+      <img src="/public/projects/project1.png" alt="Small projects" class="md:w-[500px] md:h-[478px] " />
+    </picture>
+
+    <picture >
+      <source media="(min-width: 768px)" srcset="/projects_big/project_big_2.png" />
+      <source media="(max-width: 800px)" srcset="/projects/project2.png" />
+      <img src="/public/projects/project2.png" alt="Small projects" class="md:w-[500px] md:h-[478px] " />
+    </picture>
+
+    <picture >
+      <source media="(min-width: 768px)" srcset="/projects_big/project_big_3.png" />
+      <source media="(max-width: 800px)" srcset="/projects/project3.png" />
+      <img src="/public/projects/project3.png" alt="Small projects" class="md:w-[500px] md:h-[478px]" />
+    </picture>
+
+    <picture >
+      <source media="(min-width: 768px)" srcset="/projects_big/project_big_4.png" />
+      <source media="(max-width: 800px)" srcset="/projects/project4.png" />
+      <img src="/public/projects/project4.png" alt="Small projects" class="md:w-[500px] md:h-[478px]" />
+    </picture>
+  </div>
+</section>
+<!--project section end//-->
+
+ <!-- Contact Us section start -->
+ <section class="p-5 flex flex-col gap-8 md:max-w-[1200px] md:mx-auto md:gap-24" id="Contact Us">
+  <div class="p-4 mx-auto max-w-xl bg-white font-[sans-serif]">
+    <h1 class="text-2xl text-gray-800 font-bold text-center">Contact Us</h1>
+    <form class="mt-8 space-y-4" action="/post" method="POST">
+      <input type='text' name='name' placeholder='Name' class="w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all" />
+      <input type='email' name='email' placeholder='Email' class="w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all" />
+      <input type='text' name='subject' placeholder='Subject' class="w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all" />
+      <textarea name='message' placeholder='Message' rows="4" class="w-full px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm pt-3 outline-none transition-all"></textarea>
+      <button type='submit' class="text-white bg-black hover:bg-gray-900 tracking-wide text-sm px-4 py-2.5 w-full outline-none">Send</button>
+    </form>
+    
+  </div>
+</section>
+<!-- Contact Us section End -->
+
+<!-- Rating -->
+<div class="mt-2 flex justify-center items-center gap-x-2">
+  <h3 class="text-gray-800">Was this page helpful?</h3>
+  <button 
+    type="button" 
+    id="yesButton" 
+    class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
+    <svg id="yesIcon" class="shrink-0 size-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 10v12"></path>
+      <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
+    </svg>
+    Yes
+  </button>
+  <button 
+    type="button" 
+    id="noButton" 
+    class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
+    <svg id="noIcon" class="shrink-0 size-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 14V2"></path>
+      <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22h0a3.13 3.13 0 0 1-3-3.88Z"></path>
+    </svg>
+    No
+  </button>
+</div>
+<!-- End Rating -->
+
+<!--footer section start-->
+<footer class="black-grad relative">
+  <div class="text-white p-5 lg:max-w-[1200px] lg:mx-auto">
+    <div class="flex flex-col lg:flex-row lg:gap-[180px] lg:py-9 lg:max-w-[1200px] mx-auto lg:items-baseline">
+      <div class="flex flex-col gap-4 lg:max-w-[550px]">
+        <div class="text-[20px] font-bold flex items-center gap-9">
+          <a href="#"><img src="public/logo.png" alt="Logo" class="h-24 w-auto logo-animation"></a>
+        </div>
+        <p class="text-base font-semibold">We provide a global platform for customers to explore and invest in properties worldwide with more than 25 years of experience and a focus on innovation and user experience.</p>
+        <div class="flex mt-5 gap-2">
+          <img src="/social_media/logo1.svg" alt="" class="hover:cursor-pointer">
+          <img src="/social_media/logo2.svg" alt="" class="hover:cursor-pointer">
+          <img src="/social_media/logo3.svg" alt="" class="hover:cursor-pointer">
+          <img src="/social_media/logo4.svg" alt="" class="hover:cursor-pointer">
+        </div>
+      </div>
+
+      <div class="flex justify-between items-start gap-16">
+
+        <!--Company Section-->
+          <div>
+            <h4 class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Company</h4>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">About Us</p>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Careers</p>
+          </div>
+          
+        <!-- More Section -->
+        <div>
+          <h4 class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">More</h4>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">For Investors</p>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Documentation</p>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">License</p>
+        </div>
+      
+        <!-- Support Section -->
+        <div>
+          <h4 class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Support</h4>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Help Center</p>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Contact Us</p>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">FAQs</p>
+        </div>
+      
+        <!-- Additional Section Example -->
+        <div>
+          <h4 class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Resources</h4>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Blog</p>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Tutorials</p>
+          <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Webinars</p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+
+    <div class="mt-10 text-center lg:">
+      <p class="text-md text-white">&copy; 2025 Your Company. All rights reserved.</p>
+    </div>
+
+    <div class="absolute bottom-8 right-32">
+      <a href="#" id="scrollToTop" class="bg-indigo-600 text-white p-4 rounded-lg shadow-lg hover:bg-indigo-700 transition-all">
+        <i class='bx bx-up-arrow-alt'></i>
+      </a>
+    </div>
+
+  </div>
+</footer>
+</body>
+<!--footer section end-->
+
+<script type="module" src="/main.js"></script>
+<!--<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/01/14/13/20250114133150-A672388E.js"></script>-->
+
+<!-- Custom Chat Bot -->
+<script>
+(function()
+{
+  if(!window.chatbase || window.chatbase("getState")!=="initialized")
+  {
+    window.chatbase = (...arguments) => 
+  {
+    if(!window.chatbase.q)
+    {
+      window.chatbase.q=[]
+    }
+    window.chatbase.q.push(arguments)};
+    window.chatbase = new Proxy(window.chatbase,{get(target,prop)
+    {
+      if(prop==="q") { return target.q }
+      return(...args) => target(prop,...args)}})}
+      const onLoad=function()
+      {
+        const script=document.createElement("script");
+        script.src="https://www.chatbase.co/embed.min.js";
+        script.id="ldSHwULEIWts3WHesnyo7";
+        script.domain="www.chatbase.co";
+        document.body.appendChild(script)};
+        if(document.readyState==="complete")
+        {
+          onLoad()
+        }
+        else
+        {
+          window.addEventListener("load",onLoad)
+        }})
+        ();
+</script>
+
+</html>

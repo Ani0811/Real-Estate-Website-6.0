@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>See more Real Estates properties</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="website icon" href="./public/logo2.png" type="png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css">
+</head>
+
+<body>
+  <!--nav bar start-->
+  <!--desktop version-->
+  <nav class="bg-[#2B2B2B] sticky top-0 nav-animation">
+    <div
+      class="px-5 max-w-[1200px] mx-auto  text-[#C4C4C4] hidden h-20 items-center justify-between lg:flex cursor-pointer">
+      <!--<div class="text-[20px] font-bold  gap-9 ">Logo</div>-->
+      <div class="text-[20px] font-bold flex items-center gap-9">
+        <a href="index.html"><img src="public/logo.png" alt="Logo" class="h-24 w-auto logo-animation"></a>
+      </div>
+      <ul class="flex justify-center items-center gap-20 text-base font-bold text-[#C4C4C4] flex-grow">
+        <li class="hover:border-white border-b-2 border-transparent"><a href="#">Home</a></li>
+        <li class="hover:border-white border-b-2 border-transparent"><a href="#Services">Services</a></li>
+        <li class="hover:border-white border-b-2 border-transparent"><a href="#Team">Find a Team</a></li>
+        <li class="hover:border-white border-b-2 border-transparent"><a href="#About Us">About Us</a></li>
+        <li class="hover:border-white border-b-2 border-transparent"><a href="#Articles">Articles</a></li>
+        <li class="hover:border-white border-b-2 border-transparent"><a href="#Contact Us">Contact Us</a></li>
+      </ul>
+      <!-- Login Button -->
+      <div class="ml-auto">
+        <button class="bg-[#007BFF] hover:bg-[#0056b3] text-white font-bold py-2 px-6 rounded"
+          onclick="location.href='login.html'">
+          Login
+        </button>
+      </div>
+    </div>
+    <!--desktop version-->
+  </nav>
+
+  <!--mobile version-->
+  <nav
+    class="bg-[#2B2B2B] text-white h-10 p-5 flex justify-between items-center lg:hidden navigation-menu nav-animation">
+    <div class="text-lg font-bold hover:border-white border-b-2 border-transparent">Logo</div>
+    <div class="navBar">
+      <div class="hamburger-menu" id="hamburger-menu">
+        <img src="🦆 icon _menu_.png" alt="Menu">
+      </div>
+      <div class="navBar-menu hide" id="navBar-menu">
+        <!-- Add your menu items here -->
+        <ul class="p-5 ">
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#">Home</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Services">Services</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Team">Find a Team</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#About Us">About Us</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Articles">Articles</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Contact Us">Contact Us</a></li>
+        </ul>
+        <!-- Login Button -->
+        <div class="ml-auto">
+          <button class="bg-[#007BFF] hover:bg-[#0056b3] text-white font-bold py-2 px-6 rounded"
+            onclick="location.href='login.html'">
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--mobile version-->
+
+  <!--Sale Section start-->
+
+  <section class="px-5 py-10 bg-gray-100">
+    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Properties for Sale</h3>
+
+    <div class="text-center mb-8">
+      <button
+        class="bg-[#0A72AD] text-white py-2 px-6 rounded-full shadow-md shadow-cyan-400 transition-transform duration-300 hover:scale-105">
+        Most Popular
+      </button>
+      <button
+        class="bg-[#0A72AD] text-white py-2 px-6 rounded-full shadow-md shadow-cyan-400 transition-transform duration-300 hover:scale-105">
+        By Budget
+      </button>
+      <button
+        class="bg-[#0A72AD] text-white py-2 px-6 rounded-full shadow-md shadow-cyan-400 transition-transform duration-300 hover:scale-105">
+        By Property Type
+      </button>
+      <button
+        class="bg-[#0A72AD] text-white py-2 px-6 rounded-full shadow-md shadow-cyan-400 transition-transform duration-300 hover:scale-105">
+        By BHK
+      </button>
+    </div>
+
+    <!-- Grid Section -->
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+      <div
+        class="bg-white border border-gray-300 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+        <img src="seemore_images/Luxury Villa.jpg" alt="Property 1" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Luxury Villa</h3>
+        <p class="text-blue-600 font-bold mt-2">Starting at ₹5,00,000</p>
+      </div>
+
+      <div
+        class="bg-white border border-gray-300 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+        <img src="seemore_images/Modern Apartment.jpg" alt="Property 2"
+          class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Modern Apartment</h3>
+        <p class="text-blue-600 font-bold mt-2">Starting at ₹3,50,000</p>
+      </div>
+
+      <div
+        class="bg-white border border-gray-300 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+        <img src="seemore_images/Beachfront Condo.avif" alt="Property 3"
+          class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Beachfront Condo</h3>
+        <p class="text-blue-600 font-bold mt-2">Starting at ₹4,50,000</p>
+      </div>
+
+      <div
+        class="bg-white border border-gray-300 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+        <img src="seemore_images/Urban Studio.jpg" alt="Property 4" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Urban Studio</h3>
+        <p class="text-blue-600 font-bold mt-2">Starting at ₹2,50,000</p>
+      </div>
+
+      <div
+        class="bg-white border border-gray-300 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+        <img src="seemore_images/Country House.jpeg" alt="Property 5" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Country House</h3>
+        <p class="text-blue-600 font-bold mt-2">Starting at ₹4,00,000</p>
+      </div>
+
+      <div
+        class="bg-white border border-gray-300 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+        <img src="seemore_images/Farm House.jpg" alt="Property 6" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Farm House</h3>
+        <p class="text-blue-600 font-bold mt-2">Starting at ₹10,00,000</p>
+      </div>
+
+      <div
+        class="bg-white border border-gray-300 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+        <img src="seemore_images/Pent House.jpg" alt="Property 7" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Pent House</h3>
+        <p class="text-blue-600 font-bold mt-2">Starting at ₹25,00,000</p>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!--Sale Section end-->
+
+  <!--Rent Section start-->
+  <section class="px-5 py-10 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <!-- Heading -->
+      <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Properties for Rent</h3>
+
+      <!-- Buttons -->
+      <div class="text-center mb-8">
+        <button
+          class="bg-[#0A72AD] text-white py-2 px-6 rounded-full shadow-md shadow-cyan-400 transition-transform duration-300 hover:scale-105">
+          Most Popular
+        </button>
+        <button
+          class="bg-[#0A72AD] text-white py-2 px-6 rounded-full shadow-md shadow-cyan-400 transition-transform duration-300 hover:scale-105">
+          By Budget
+        </button>
+        <button
+          class="bg-[#0A72AD] text-white py-2 px-6 rounded-full shadow-md shadow-cyan-400 transition-transform duration-300 hover:scale-105">
+          By Property Type
+        </button>
+        <button
+          class="bg-[#0A72AD] text-white py-2 px-6 rounded-full shadow-md shadow-cyan-400 transition-transform duration-300 hover:scale-105">
+          By BHK
+        </button>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div class="border rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300">
+          <img src="seemore_images/Cozy apartment.jpg" alt="Property Image"
+            class="w-full h-32 object-cover rounded-md mb-4">
+          <h3 class="text-lg font-bold text-gray-700">Cozy Apartment</h3>
+          <p class="text-gray-500 text-sm">2 BHK, City Center</p>
+          <p class="text-blue-600 font-bold mt-2">₹25,000/month</p>
+        </div>
+
+        <div class="border rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300">
+          <img src="new_seemore_images/Luxury Condo.jpg" alt="Property Image"
+            class="w-full h-32 object-cover rounded-md mb-4">
+          <h3 class="text-lg font-bold text-gray-700">Luxury Condo</h3>
+          <p class="text-gray-500 text-sm">3 BHK, Suburbs</p>
+          <p class="text-blue-600 font-bold mt-2">₹50,000/month</p>
+        </div>
+
+        <div class="border rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300">
+          <img src="new_seemore_images/Studio Apartment.jpg" alt="Property Image"
+            class="w-full h-32 object-cover rounded-md mb-4">
+          <h3 class="text-lg font-bold text-gray-700">Studio Apartment</h3>
+          <p class="text-gray-500 text-sm">1 BHK, Downtown</p>
+          <p class="text-blue-600 font-bold mt-2">₹15,000/month</p>
+        </div>
+
+        <div class="border rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300">
+          <img src="new_seemore_images/Modern Villa.jpg" alt="Property Image"
+            class="w-full h-32 object-cover rounded-md mb-4">
+          <h3 class="text-lg font-bold text-gray-700">Modern Villa</h3>
+          <p class="text-gray-500 text-sm">4 BHK, Beachfront</p>
+          <p class="text-blue-600 font-bold mt-2">₹1,50,000/month</p>
+        </div>
+
+        <div class="border rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300">
+          <img src="seemore_images/Budget Room.jpeg" alt="Property Image"
+            class="w-full h-32 object-cover rounded-md mb-4">
+          <h3 class="text-lg font-bold text-gray-700">Budget Room</h3>
+          <p class="text-gray-500 text-sm">1 RK, Nearby Market</p>
+          <p class="text-blue-600 font-bold mt-2">₹₹8,000/month</p>
+        </div>
+
+        <div class="border rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300">
+          <img src="seemore_images/Penthouse Site.webp" alt="Property Image"
+            class="w-full h-32 object-cover rounded-md mb-4">
+          <h3 class="text-lg font-bold text-gray-700">Penthouse Site</h3>
+          <p class="text-gray-500 text-sm">5 BHK, Skyline View</p>
+          <p class="text-blue-600 font-bold mt-2">₹2,00,000/month</p>
+        </div>
+
+        <div class="border rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300">
+          <img src="seemore_images/Urban Loft.jpg" alt="Property Image"
+            class="w-full h-32 object-cover rounded-md mb-4">
+          <h3 class="text-lg font-bold text-gray-700">Urban Loft</h3>
+          <p class="text-gray-500 text-sm">3 BHK, Arts District</p>
+          <p class="text-blue-600 font-bold mt-2">₹75,000/month</p>
+        </div>
+      </div>
+  </section>
+
+  <section class="px-5 py-10 bg-gray-100">
+    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Premium Projects</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+      <!-- Card 1 -->
+      <div
+        class="bg-white border border-gray-300 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+        <img src="new_seemore_images/Elite Villa.jpg" alt="Premium 1" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Elite Villa</h3>
+        <p class="text-blue-600 font-bold mt-2">Starting at ₹5,000,000</p>
+      </div>
+      <!-- Card 2 -->
+      <div
+        class="bg-white border border-gray-300 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+        <img src="new_seemore_images/Skyline Penthouse.jpeg" alt="Premium 2"
+          class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Skyline Penthouse</h3>
+        <p class="text-blue-600 font-bold mt-2">Starting at ₹10,000,000</p>
+      </div>
+      <!-- Card 3 -->
+      <div
+        class="bg-white border border-gray-300 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+        <img src="new_seemore_images/Seaside Mansion.jpg" alt="Premium 3"
+          class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Seaside Mansion</h3>
+        <p class="text-blue-600 font-bold mt-2">Starting at ₹7,500,000</p>
+      </div>
+      <!-- Card 4 -->
+      <div
+        class="bg-white border border-gray-300 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+        <img src="new_seemore_images/Green Retreat.jpg" alt="Premium 4"
+          class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Green Retreat</h3>
+        <p class="text-blue-600 font-bold mt-2">Starting at ₹6,000,000</p>
+      </div>
+      <!-- Card 5 -->
+      <div
+        class="bg-white border border-gray-300 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+        <img src="new_seemore_images/Urban Oasis.jpeg" alt="Premium 5" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Urban Oasis</h3>
+        <p class="text-blue-600 font-bold mt-2">Starting at ₹8,000,000</p>
+      </div>
+      <!-- Card 6 -->
+      <div
+        class="bg-white border border-gray-300 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+        <img src="new_seemore_images/City Heights.jpg" alt="Premium 6" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mb-2">City Heights</h3>
+        <p class="text-blue-600 font-bold mt-2">Starting at ₹9,000,000</p>
+      </div>
+      <!-- Card 7 -->
+      <div
+        class="bg-white border border-gray-300 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+        <img src="new_seemore_images/Luxury Haven.jpeg" alt="Premium 7"
+          class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Luxury Haven</h3>
+        <p class="text-blue-600 font-bold mt-2">Starting at ₹12,000,000</p>
+      </div>
+    </div>
+  </section>
+
+  <!--footer section start-->
+  <footer class="black-grad relative">
+    <div class="text-white p-5 lg:max-w-[1200px] lg:mx-auto">
+      <div class="flex flex-col lg:flex-row lg:gap-[180px] lg:py-9 lg:max-w-[1200px] mx-auto lg:items-baseline">
+        <div class="flex flex-col gap-4 lg:max-w-[550px]">
+          <div class="text-[20px] font-bold flex items-center gap-9">
+            <a href="index.html"><img src="public/logo.png" alt="Logo" class="h-24 w-auto logo-animation"></a>
+          </div>
+          <p class="text-base font-semibold">We provide a global platform for customers to explore and invest in
+            properties worldwide with more than 25 years of experience and a focus on innovation and user experience.
+          </p>
+          <div class="flex mt-5 gap-2">
+            <img src="/social_media/logo1.svg" alt="" class="hover:cursor-pointer">
+            <img src="/social_media/logo2.svg" alt="" class="hover:cursor-pointer">
+            <img src="/social_media/logo3.svg" alt="" class="hover:cursor-pointer">
+            <img src="/social_media/logo4.svg" alt="" class="hover:cursor-pointer">
+          </div>
+        </div>
+
+        <div class="flex justify-between items-start gap-16">
+
+          <!--Company Section-->
+          <div>
+            <h4
+              class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">
+              Company</h4>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">
+              About Us</p>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">
+              Careers</p>
+          </div>
+
+          <!-- More Section -->
+          <div>
+            <h4
+              class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">
+              More</h4>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">For
+              Investors</p>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">
+              Documentation</p>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">
+              License</p>
+          </div>
+
+          <!-- Support Section -->
+          <div>
+            <h4
+              class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">
+              Support</h4>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">
+              Help Center</p>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">
+              Contact Us</p>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">
+              FAQs</p>
+          </div>
+
+          <!-- Additional Section Example -->
+          <div>
+            <h4
+              class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">
+              Resources</h4>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">
+              Blog</p>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">
+              Tutorials</p>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">
+              Webinars</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="mt-10 text-center lg:">
+      <p class="text-md text-white">&copy; 2025 Your Company. All rights reserved.</p>
+    </div>
+
+    <div class="absolute bottom-8 right-32">
+      <a href="#" id="scrollToTop"
+        class="bg-indigo-600 text-white p-4 rounded-lg shadow-lg hover:bg-indigo-700 transition-all">
+        <i class='bx bx-up-arrow-alt'></i>
+      </a>
+    </div>
+
+    </div>
+  </footer>
+  <!--footer section end-->
+  <!-- Custom Chat Bot -->
+  <script>
+    (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "ldSHwULEIWts3WHesnyo7"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+
+  </script>
+  
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="website icon" href="./public/logo2.png" type="png">
+    <script src="https://kit.fontawesome.com/c0e27fec68.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css">
+    <title>Sign Up to RIMBERIO!!</title>
+    <style>
+      /* Adding background image */
+      body {
+          background-image: url('/public/apartment/residence-2219972_1280.jpg'); /* Replace with the correct path to your image */
+          background-size: cover; /* Ensures the background covers the entire page */
+          background-position: center; /* Centers the background image */
+          background-attachment: fixed; /* Keeps the background fixed when scrolling */
+          color: #fff; /* Sets the text color to white for better contrast */
+
+      }
+      
+      /* Ensuring the login container is visible on top of the background */
+      .login-outer-container {
+          /* background-color: rgba(0, 0, 0, 0.5); Adds a transparent black background for readability */
+          padding: 50px 0;
+      }
+      .login-container {
+          /* background-color: rgba(255, 255, 255, 0.9); White background with slight transparency */
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+  </style>
+</head>
+
+<body>
+<!--nav bar start-->
+  <!--desktop version-->
+  <nav class="bg-[#2B2B2B] sticky top-0 nav-animation">
+    <div class="px-5 max-w-[1200px] mx-auto  text-[#C4C4C4] hidden h-20 items-center justify-between lg:flex cursor-pointer">
+      <!--<div class="text-[20px] font-bold  gap-9 ">Logo</div>-->
+      <div class="text-[20px] font-bold flex items-center gap-9">
+        <a href="#"><img src="public/logo.png" alt="Logo" class="h-24 w-auto logo-animation"></a>
+      </div>
+      <ul class="flex justify-center items-center gap-20 text-base font-bold text-[#C4C4C4] flex-grow">
+        <li class="hover:border-white border-b-2 border-transparent"><a href="index.html">Home</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Services">Services</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Team">Find a Team</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#About Us">About Us</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Articles">Articles</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Contact Us">Contact Us</a></li>
+        </ul>
+    </div>
+     <!--desktop version-->
+   </nav>
+
+<!--mobile version-->
+<nav class="bg-[#2B2B2B] text-white h-10 p-5 flex justify-between items-center lg:hidden navigation-menu nav-animation">
+<div class="text-lg font-bold hover:border-white border-b-2 border-transparent">Logo</div>
+<div class="navBar">
+    <div class="hamburger-menu" id="hamburger-menu">
+        <img src="🦆 icon _menu_.png" alt="Menu">
+    </div>
+    <div class="navBar-menu hide" id="navBar-menu">
+        <!-- Add your menu items here -->
+         <ul class="p-5 ">
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#">Home</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Services">Services</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Team">Find a Team</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#About Us">About Us</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Articles">Articles</a></li>
+          <li class="hover:border-white border-b-2 border-transparent"><a href="#Contact Us">Contact Us</a></li>
+         </ul>
+    </div>
+</div>
+</nav>
+ <!--mobile version-->
+
+  <!--nav bar end-->
+    <div class='login-outer-container'>
+        <div class='login-container'>
+            <div class='login-area'>
+                <h3 class="font-bold">REGISTER TO RIMBERIO!!</h3>
+                <form class='login-items'>
+                    <label htmlFor="name">Name</label>
+                    <input type="text" class='login' name="name" placeholder='Your name' required />
+                    <label htmlFor="email">Email</label>
+                    <input type="email" class='login' name="email" placeholder="your-email@gmail.com" required />
+                    <label htmlFor="password">Password</label>
+                    <input type="password" class='login' name="password" id="" placeholder='Enter password' required />
+                    <input type="submit" class='login-btn' value="Register" />
+                </form>
+                <p class='p'>Already have an account?
+                    <a class='a' href="login.html">Please Login</a>
+                </p>
+
+                <div class='social-login-container'>
+                    <p class='prompt'>or</p>
+                    <div class='social-login'>
+                        <button class='google-signin'><i class="fa-brands fa-google"></i> Login with Google</button>
+                        <button class='github-signin'><i class="fa-brands fa-github"></i>Login with Github</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!--footer section start-->
+ <footer class="black-grad relative">
+    <div class="text-white p-5 lg:max-w-[1200px] lg:mx-auto">
+      <div class="flex flex-col lg:flex-row lg:gap-[180px] lg:py-9 lg:max-w-[1200px] mx-auto lg:items-baseline">
+        <div class="flex flex-col gap-4 lg:max-w-[550px]">
+          <div class="text-[20px] font-bold flex items-center gap-9">
+            <a href="#"><img src="public/logo.png" alt="Logo" class="h-24 w-auto logo-animation"></a>
+          </div>
+          <p class="text-base font-semibold">We provide a global platform for customers to explore and invest in properties worldwide with more than 25 years of experience and a focus on innovation and user experience.</p>
+          <div class="flex mt-5 gap-2">
+            <img src="/social_media/logo1.svg" alt="" class="hover:cursor-pointer">
+            <img src="/social_media/logo2.svg" alt="" class="hover:cursor-pointer">
+            <img src="/social_media/logo3.svg" alt="" class="hover:cursor-pointer">
+            <img src="/social_media/logo4.svg" alt="" class="hover:cursor-pointer">
+          </div>
+        </div>
+  
+        <div class="flex justify-between items-start gap-16">
+  
+          <!--Company Section-->
+            <div>
+              <h4 class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Company</h4>
+              <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">About Us</p>
+              <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Careers</p>
+            </div>
+            
+          <!-- More Section -->
+          <div>
+            <h4 class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">More</h4>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">For Investors</p>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Documentation</p>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">License</p>
+          </div>
+        
+          <!-- Support Section -->
+          <div>
+            <h4 class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Support</h4>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Help Center</p>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Contact Us</p>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">FAQs</p>
+          </div>
+        
+          <!-- Additional Section Example -->
+          <div>
+            <h4 class="text-xl font-bold hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Resources</h4>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Blog</p>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Tutorials</p>
+            <p class="mt-4 text-md hover:border-b-2 cursor-pointer hover:border-white border-b-2 border-transparent">Webinars</p>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+  
+      <div class="mt-10 text-center lg:">
+        <p class="text-md text-white">&copy; 2025 Your Company. All rights reserved.</p>
+      </div>
+  
+      <div class="absolute bottom-8 right-32">
+        <a href="#" id="scrollToTop" class="bg-indigo-600 text-white p-4 rounded-lg shadow-lg hover:bg-indigo-700 transition-all">
+          <i class='bx bx-up-arrow-alt'></i>
+        </a>
+      </div>
+  
+    </div>
+  </footer>
+  <!--footer section end-->
+  <script src="./index.js" type="module" ></script>
+  <script>
+    (function()
+    {
+      if(!window.chatbase || window.chatbase("getState")!=="initialized")
+      {
+        window.chatbase = (...arguments) => 
+      {
+        if(!window.chatbase.q)
+        {
+          window.chatbase.q=[]
+        }
+        window.chatbase.q.push(arguments)};
+        window.chatbase = new Proxy(window.chatbase,{get(target,prop)
+        {
+          if(prop==="q") { return target.q }
+          return(...args) => target(prop,...args)}})}
+          const onLoad=function()
+          {
+            const script=document.createElement("script");
+            script.src="https://www.chatbase.co/embed.min.js";
+            script.id="ldSHwULEIWts3WHesnyo7";
+            script.domain="www.chatbase.co";
+            document.body.appendChild(script)};
+            if(document.readyState==="complete")
+            {
+              onLoad()
+            }
+            else
+            {
+              window.addEventListener("load",onLoad)
+            }})
+            ();
+    </script>
+</body>
+</html>
