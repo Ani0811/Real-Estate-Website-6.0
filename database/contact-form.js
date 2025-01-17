@@ -4,13 +4,14 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebas
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCn_Hk4PhNqD_XUR0dETqemD9fLWM-_X6Q",
-    authDomain: "login-form-3e59c.firebaseapp.com",
-    projectId: "login-form-3e59c",
-    storageBucket: "login-form-3e59c.firebasestorage.app",
-    messagingSenderId: "936197205796",
-    appId: "1:936197205796:web:01bbab5b71900993474db1"
+    apiKey: "AIzaSyBfvslvEf05guHvooDN_Y1XKjGrJQyJVIs",
+    authDomain: "login-contac-form.firebaseapp.com",
+    projectId: "login-contac-form",
+    storageBucket: "login-contac-form.firebasestorage.app",
+    messagingSenderId: "617271546176",
+    appId: "1:617271546176:web:9779f18a24451ac56caaa5"
   };
+  
 
   
 // Initialize Firebase
