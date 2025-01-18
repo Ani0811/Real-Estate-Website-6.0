@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="./main.css">
   <link rel="website icon" href="./public/logo2.png" type="png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css">
+  <script src="./node_modules/toastify-js/src/toastify.js" type="module"></script>
+  <script src="./auth/login.js" type="module"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
 </head>
 
 <body>
@@ -22,7 +26,7 @@
         <a href="index.html"><img src="public/logo.png" alt="Logo" class="h-24 w-auto logo-animation"></a>
       </div>
       <ul class="flex justify-center items-center gap-20 text-base font-bold text-[#C4C4C4] flex-grow">
-        <li class="hover:border-white border-b-2 border-transparent"><a href="#">Home</a></li>
+        <li class="hover:border-white border-b-2 border-transparent"><a href="index.html">Home</a></li>
         <li class="hover:border-white border-b-2 border-transparent"><a href="#Services">Services</a></li>
         <li class="hover:border-white border-b-2 border-transparent"><a href="#Team">Find a Team</a></li>
         <li class="hover:border-white border-b-2 border-transparent"><a href="#About Us">About Us</a></li>
@@ -31,11 +35,16 @@
       </ul>
       <!-- Login Button -->
       <div class="ml-auto">
-        <button class="bg-[#007BFF] hover:bg-[#0056b3] text-white font-bold py-2 px-6 rounded"
-          onclick="location.href='login.html'">
+        <button id="loginButton" class="bg-[#007BFF] hover:bg-[#0056b3] text-white font-bold py-2 px-6 rounded" 
+                onclick="location.href='login.html'">
           Login
         </button>
       </div>
+    </button>
+    <button id="logoutButton" class="bg-[#FF0000] hover:bg-[#cc0000] text-white font-bold py-2 px-6 rounded hidden none"
+            onclick="logout()">
+      Logout
+    </button>
     </div>
     <!--desktop version-->
   </nav>

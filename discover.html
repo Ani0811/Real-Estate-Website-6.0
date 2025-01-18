@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./main.css">
     <link rel="website icon" href="./public/logo2.png" type="png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css">
+    <script src="./node_modules/toastify-js/src/toastify.js" type="module"></script>
+    <script src="./auth/login.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
 </head>
 <body>
     <!--nav bar start-->
@@ -27,13 +31,16 @@
           <li class="hover:border-white border-b-2 border-transparent"><a href="#">Contact Us</a></li>
       </ul>
       <!-- Login Button -->
-      <div class="ml-auto">
-        <button class="bg-[#007BFF] hover:bg-[#0056b3] text-white font-bold py-2 px-6 rounded"
-                onclick="location.href='login.html'">
-          Login
-        </button>
+        <!-- Login Button -->
+        <div class="ml-auto">
+          <button id="loginButton" class="bg-[#007BFF] hover:bg-[#0056b3] text-white font-bold py-2 px-6 rounded" 
+                  onclick="location.href='login.html'">
+            Login
+          </button>
+        </div>
+      <button id="logoutButton" class="bg-[#FF0000] hover:bg-[#cc0000] text-white font-bold py-2 px-6 rounded hidden none"
+              onclick="logout()">Logout</button>
       </div>
-    </div>
      <!--desktop version-->
    </nav>
 
@@ -307,6 +314,7 @@
     });
   </script>
     <!-- Custom Chat Bot -->
+  
   <script>
     (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="ldSHwULEIWts3WHesnyo7";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>    
