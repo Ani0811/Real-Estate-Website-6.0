@@ -7,6 +7,7 @@ Real Estate Website 6.0 is a modern web application designed to simplify propert
 - **HTML**: For structuring the web pages.
 - **CSS**: For styling the application.
 - **Tailwind CSS**: For rapid UI development with utility-first styling.
+- **JavaScript**: For adding interactivity and functionality.
 - **Firebase**:
   - Authentication: For secure user login and registration.
   - Real-Time Database: For dynamic and synchronized data storage.
