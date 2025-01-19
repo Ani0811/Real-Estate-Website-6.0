@@ -45,4 +45,5 @@ Real Estate Website 6.0 is a modern web application designed to simplify propert
 6. Install Firebase for Integration:  
    ```bash
    npm install firebase
+   ```
    
