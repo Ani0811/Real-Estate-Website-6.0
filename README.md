@@ -1,5 +1,17 @@
 # Real Estate Website 6.0
 
+## Description
+Real Estate Website 6.0 is a modern web application designed to simplify property management and browsing. Built with a clean and responsive design, the application provides features like user authentication and real-time data updates to deliver a seamless experience. The project leverages cutting-edge technologies for an efficient and scalable solution.
+
+## Technologies Used
+- **HTML**: For structuring the web pages.
+- **CSS**: For styling the application.
+- **Tailwind CSS**: For rapid UI development with utility-first styling.
+- **Firebase**:
+  - Authentication: For secure user login and registration.
+  - Real-Time Database: For dynamic and synchronized data storage.
+
+
 ## Installation
 
 1. Clone the Repository:  
