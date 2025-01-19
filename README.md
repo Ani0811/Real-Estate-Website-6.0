@@ -11,7 +11,7 @@ Real Estate Website 6.0 is a modern web application designed to simplify propert
   - Authentication: For secure user login and registration.
   - Real-Time Database: For dynamic and synchronized data storage.
 
-![image](https://github.com/user-attachments/assets/6baa7423-c431-459d-9cc4-854a1f6e6e71)
+
 
 
 ## Installation
