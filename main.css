@@ -93,7 +93,26 @@ button {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.star-icon {
+  transition: fill 0.3s ease;
+}
 
+.star-icon.filled {
+  fill: #fbbf24; /* Yellow for filled stars */
+}
+
+.star-icon.empty {
+  fill: #d1d5db; /* Gray for empty stars */
+}
+
+.hidden {
+  display: none;
+}
+.fade-in {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
 /* Add keyframes for animations */
 /* @keyframes slideIn {
   from {

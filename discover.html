@@ -191,22 +191,35 @@
 
 <main>
   <section class="p-5 md:bg-[#f8f8f8]">
-    <div class=" text-black flex flex-col  gap-4 md:flex-row md:items-end md:gap-10 max-w-[1200px] mx-auto">
-        <!-- Hero Text Section -->
-      <div class="flex flex-col pt-20 px-5 gap-2 md:pb-20">
-        <h1 class="text-center text-xl font-medium md:text-4xl">
+    <div class="text-black flex flex-col gap-4 md:flex-row md:items-start md:gap-10 max-w-[1200px] mx-auto">
+      <!-- Hero Text Section -->
+      <div class="flex flex-col pt-20 px-5 gap-2 md:pb-20 flex-1">
+        <h1 class="text-center md:text-left text-xl font-medium md:text-4xl">
           An Overview of the Real Estate Market
-        </h1>      
+        </h1>
         <p id="text-section" class="text-gray-800 text-base max-w-[35rem]">
           The real estate market is a dynamic sector that reflects the economic growth and societal trends of a region. With increasing urbanization and demand for modern infrastructure, the market offers a variety of residential, commercial, and industrial properties.
-        <span id="more-text" class="hidden">
-        Investors are drawn to real estate for its potential to generate significant returns, while buyers appreciate the variety and customization options available. Economic policies, interest rates, and regional growth drive market trends, making it essential to stay informed for strategic decision-making.
-        </span>
+          <span id="more-text" class="hidden">
+          Investors are drawn to real estate for its potential to generate significant returns, while buyers appreciate the variety and customization options available. Economic policies, interest rates, and regional growth drive market trends, making it essential to stay informed for strategic decision-making.
+          </span>
         </p>
         <a id="read-more-link" href="#" class="text-indigo-600 font-light">Read More</a>
       </div>
-  </div>
-</div>
+      <!-- Timer Section -->
+      <div class="mt-5 md:mt-20 ml-auto text-md text-white bg-black bg-opacity-70 p-2 rounded-md text-center w-fit">
+        <p>Upcoming Projects In:</p>
+        <div class="flex justify-center gap-1">
+          <span id="days" class="bg-gray-800 p-1 rounded-md">00</span>
+          <span>:</span>
+          <span id="hours" class="bg-gray-800 p-1 rounded-md">00</span>
+          <span>:</span>
+          <span id="minutes" class="bg-gray-800 p-1 rounded-md">00</span>
+          <span>:</span>
+          <span id="seconds" class="bg-gray-800 p-1 rounded-md">00</span>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <!--footer section start-->
@@ -313,9 +326,54 @@
         }
     });
   </script>
-    <!-- Custom Chat Bot -->
+
+<script>
+// Function to start the countdown and persist the target end date
+function startCountdown(durationDays) {
+    let countdownEnd = localStorage.getItem("countdownEnd");
+    
+    // If countdownEnd does not exist in localStorage, set it for the first time
+    if (!countdownEnd) {
+      countdownEnd = new Date().getTime() + durationDays * 24 * 60 * 60 * 1000;
+      localStorage.setItem("countdownEnd", countdownEnd);
+    }
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const timeLeft = countdownEnd - now;
+
+      if (timeLeft > 0) {
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = days.toString().padStart(2, "0");
+        document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+        document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+        document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+      } else {
+        // When countdown ends, keep the timer running but show that the project is started
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+        // Optional: You can change text or do something else here, like showing a message
+        document.querySelector(".text-center p").textContent = "The Project Has Started!";
+      }
+    }
+    // Update the timer every second
+    const timerInterval = setInterval(updateCountdown, 1000);
+    updateCountdown(); // Initial call to set the correct value
+  }
+
+  // Start the countdown for 20 days
+  startCountdown(20);
+</script>
+
+<!-- Custom Chat Bot -->
   
-    <script>
-      (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="on1BO6ELf1bD-yzHsttJn";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-      </script> 
+<script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="on1BO6ELf1bD-yzHsttJn";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script> 
 </html>
