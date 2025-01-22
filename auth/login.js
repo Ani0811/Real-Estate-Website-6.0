@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
 
-import { getAuth, signInWithEmailAndPassword , onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword , onAuthStateChanged, signOut,sendPasswordResetEmail  } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -62,26 +62,32 @@ signInWithEmailAndPassword (auth, email, password)
 });
 
 // Handle reset password link click
-const resetPasswordLink = document.getElementById("resetPasswordLink");
-if (resetPasswordLink) {
-  resetPasswordLink.addEventListener("click", function(e) {
-    e.preventDefault();
 
-    const email = prompt("Please enter your email address:");
-    if (email) {
-      sendPasswordResetEmail(auth, email)
-        .then(() => {
-          alert("Password reset email sent!");
-        })
-        .catch((error) => {
-          console.error("Error sending password reset email:", error);
-          alert("Error sending password reset email: " + error.message);
-        });
-    }
-  });
-} else {
-  console.error("Could not find link with ID 'resetPasswordLink'");
-}
+document.addEventListener('DOMContentLoaded', function() {
+  // Handle reset password link click
+  let resetLink = document.getElementById("resetPasswordLink");
+  if (!resetLink) {
+    console.error("Could not find link with ID 'resetPasswordLink'");
+  } else {
+    console.log("Found link");
+    resetLink.addEventListener("click", function(e) {
+      e.preventDefault();
+  
+      const email = prompt("Please enter your email address:");
+      if (email) {
+        sendPasswordResetEmail(auth, email)
+          .then(() => {
+            alert("Password reset email sent!");
+          })
+          .catch((error) => {
+            console.error("Error sending password reset email:", error);
+            alert("Error sending password reset email: " + error.message);
+          });
+      }
+    });
+  }
+});
+  
 
 
 // Check authentication state and show/hide logout button
@@ -110,8 +116,11 @@ onAuthStateChanged(auth, (user) => {
 });
 
 // Handle logout functionality
-const logoutButton = document.getElementById("logoutButton");
-if (logoutButton) {
+let logoutButton = document.getElementById("logoutButton");
+if (!logoutButton) {
+  console.error("Could not find button with ID 'logoutButton'");
+
+}else {
   logoutButton.addEventListener("click", function() {
     signOut(auth).then(() => {
       alert("User logged out successfully!");
@@ -121,8 +130,4 @@ if (logoutButton) {
       alert("Error logging out: " + error.message);
     });
   });
-} else {
-  console.error("Could not find button with ID 'logoutButton'");
-}
-
-;
+} 

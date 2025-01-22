@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="./main.css">
     <link rel="website icon" href="./public/logo2.png" type="png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css">
-    <link rel="stylesheet" href="./assets/toastify.css">
-    <script src="./node_modules/toastify-js/src/toastify.js" type="module"></script>
-    <script src="./auth/login.js" type="module"></script>
+    <script src="./auth/login.js" type="module" defer></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
   </head>
@@ -501,19 +499,20 @@
 
 
 <!--Customer Reviews Section start-->
+<!--Customer Reviews Section start-->
 <section class="p-5 flex flex-col gap-8 md:max-w-[1200px] md:mx-auto md:gap-24 items-center justify-center">
-  <div class="flex flex-col max-w-xl p-8 shadow-lg rounded-xl lg:p-12 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+  <div class="flex flex-col max-w-xl p-8 shadow-lg rounded-xl lg:p-12 bg-white ">
     <div class="flex flex-col w-full">
       <h2 class="text-3xl font-semibold text-center">Customer Reviews</h2>
       <div class="flex flex-wrap items-center mt-2 mb-1 space-x-2" id="rating-stars">
            <!-- Dynamic stars will be added here by JavaScript -->
         </div>
       </div>
-      <p class="text-md text-gray-500 dark:text-gray-400">861 global ratings</p><br>
+      <p class="text-md text-gray-500 ">861 global ratings</p><br>
       <div id="ratings-container" class="hidden opacity-0 transition-all transform duration-500 ease-out">
         <div class="flex items-center space-x-2">
           <span class="flex-shrink-0 w-12 text-sm">5 stars</span>
-          <div class="flex-1 h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+          <div class="flex-1 h-4 bg-gray-200  rounded-full overflow-hidden">
             <div class="bg-yellow-500 h-4 w-[83%]"></div>
           </div>
           <span class="flex-shrink-0 w-12 text-sm text-right">83%</span>
@@ -521,7 +520,7 @@
         <div class="flex flex-col mt-4">
           <div class="flex items-center space-x-2">
             <span class="flex-shrink-0 w-12 text-sm">4 stars</span>
-            <div class="flex-1 h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+            <div class="flex-1 h-4 bg-gray-200  rounded-full overflow-hidden">
               <div class="bg-yellow-500 h-4 w-[74%]"></div>
             </div>
             <span class="flex-shrink-0 w-12 text-sm text-right">74%</span>
@@ -530,7 +529,7 @@
         <div class="flex flex-col mt-4">
           <div class="flex items-center space-x-2">
             <span class="flex-shrink-0 w-12 text-sm">3 stars</span>
-            <div class="flex-1 h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+            <div class="flex-1 h-4 bg-gray-200  rounded-full overflow-hidden">
               <div class="bg-yellow-500 h-4 w-[45%]"></div>
             </div>
             <span class="flex-shrink-0 w-12 text-sm text-right">45%</span>
@@ -539,7 +538,7 @@
         <div class="flex flex-col mt-4">
           <div class="flex items-center space-x-2">
             <span class="flex-shrink-0 w-12 text-sm">2 stars</span>
-            <div class="flex-1 h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+            <div class="flex-1 h-4 bg-gray-200  rounded-full overflow-hidden">
               <div class="bg-yellow-500 h-4 w-[21%]"></div>
             </div>
             <span class="flex-shrink-0 w-12 text-sm text-right">21%</span>
@@ -548,7 +547,7 @@
         <div class="flex flex-col mt-4">
           <div class="flex items-center space-x-2">
             <span class="flex-shrink-0 w-12 text-sm">1 star</span>
-            <div class="flex-1 h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+            <div class="flex-1 h-4 bg-gray-200  rounded-full overflow-hidden">
               <div class="bg-yellow-500 h-4 w-[8%]"></div>
             </div>
             <span class="flex-shrink-0 w-12 text-sm text-right">8%</span>
@@ -557,6 +556,7 @@
     </div>
   </div>
 </section>
+<!--Customer Reviews Section end-->
 <!--Customer Reviews Section end-->
 
  <!-- Contact Us section start -->
@@ -576,34 +576,6 @@
     
   </div>
 </section>
-<!-- Contact Us section End -->
-
-<!-- Rating 
-<div class="mt-2 flex justify-center items-center gap-x-2">
-  <h3 class="text-gray-800">Was this page helpful?</h3>
-  <button 
-    type="button" 
-    id="yesButton" 
-    class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
-    <svg id="yesIcon" class="shrink-0 size-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M7 10v12"></path>
-      <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
-    </svg>
-    Yes
-  </button>
-  <button 
-    type="button" 
-    id="noButton" 
-    class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
-    <svg id="noIcon" class="shrink-0 size-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M17 14V2"></path>
-      <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22h0a3.13 3.13 0 0 1-3-3.88Z"></path>
-    </svg>
-    No
-  </button>
-</div>
-End Rating -->
-
 
 
 <!--footer section start-->

@@ -23,28 +23,27 @@ let contactInfo=ref(database, "infos");
 
 
 // Listen for a submit
+// Listen for a submit
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById("contactForm");
-  if (form) {
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
+  if (!form) {
+    console.error("Could not find form with ID 'contactForm'");
+  } else {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
       // Handle form submission logic here
       const name = document.querySelector(".name").value;
       const email = document.querySelector(".email").value;
       const subject = document.querySelector(".subject").value;
       const message = document.querySelector(".message").value;
 
-      console.log("Form submitted with values:", { name, email, subject, message });
-      alert("Form submitted successfully!");
-
-      // Example of storing data in localStorage (you can replace this with your actual storage logic)
-      localStorage.setItem("contactFormData", JSON.stringify({ name, email, subject, message }));
-      saveContactInfo(name,email,subject,message);
+      // Save form data to localStorage (you can replace this with your actual storage logic)
+      localStorage.setItem("contactForm", JSON.stringify({ name, email, subject, message }));
+      saveContactInfo(name, email, subject, message);
     });
-  } else {
-    console.error("Could not find form with ID 'contactForm'");
   }
 });
+
 
 // Save infos to Firebase
 function saveContactInfo(name,email,subject,message){
