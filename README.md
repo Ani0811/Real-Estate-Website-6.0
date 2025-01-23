@@ -37,12 +37,18 @@ Real Estate Website 6.0 is a modern web application designed to simplify propert
    npm install vite --save-dev
    ```
 
-5. Build the Project:  
+5. Run the Vite Server
+   ```bash
+   npm run dev
+   ```
+
+
+6. Build the Project:  
    ```bash
    npm run build
    ```
 
-6. Install Firebase for Integration:  
+7. Install Firebase for Integration:  
    ```bash
    npm install firebase
    ```
