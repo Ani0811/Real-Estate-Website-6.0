@@ -1,0 +1,146 @@
+{
+  "_schema": {
+    "columns": {
+      "pictures": {
+        "config": {},
+        "fieldName": "pictures",
+        "index": 3,
+        "key": "pictures",
+        "name": "Pictures",
+        "type": "IMAGE"
+      },
+      "_createdBy": {
+        "config": {},
+        "fieldName": "_createdBy",
+        "index": 5,
+        "key": "_createdBy",
+        "name": "Created By",
+        "type": "CREATED_BY"
+      },
+      "email": {
+        "config": {
+          "defaultValue": {
+            "type": "static",
+            "value": ""
+          },
+          "validationRegex": "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-zA-z]{2,3}$"
+        },
+        "fieldName": "email",
+        "index": 0,
+        "key": "email",
+        "name": "Email",
+        "type": "EMAIL",
+        "width": 150
+      },
+      "phone": {
+        "config": {},
+        "fieldName": "phone",
+        "index": 2,
+        "key": "phone",
+        "name": "Phone",
+        "type": "PHONE_NUMBER"
+      },
+      "picturesFile": {
+        "config": {},
+        "fieldName": "picturesFile",
+        "index": 4,
+        "key": "picturesFile",
+        "name": "Pictures_File",
+        "type": "FILE"
+      },
+      "_updatedBy": {
+        "config": {},
+        "fieldName": "_updatedBy",
+        "index": 6,
+        "key": "_updatedBy",
+        "name": "Updated By",
+        "type": "UPDATED_BY"
+      },
+      "user": {
+        "config": {},
+        "fieldName": "user",
+        "index": 1,
+        "key": "user",
+        "name": "User",
+        "type": "USER"
+      }
+    },
+    "extensionObjects": [
+      {
+        "active": true,
+        "conditions": "const condition: Condition = async({row, change, logging}) => {\n \n  logging.log(\"condition started\")\n  \n  return true;\n  \n}",
+        "extensionBody": "const extensionBody: ApiCallBody = async({row, db, change, ref, logging}) => {\n \n  logging.log(\"extensionBody started\")\n  \n  // Import any NPM package needed\n  // const lodash = require('lodash');\n  \n  return ({\n    body: \"\",\n    url: \"\",\n    method: \"\",\n    callback: ()=>{},\n  })\n  \n}",
+        "lastEditor": {
+          "displayName": "Arnab Roy",
+          "lastUpdate": 1741098123214,
+          "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocLjnNs2jQlsCWlkqUiG4rrtvYI4cq7zvby-6lssGqwWkxoOjqLFOg=s96-c"
+        },
+        "name": "apiCall extension",
+        "requiredFields": [],
+        "trackedFields": [],
+        "triggers": ["create", "update", "delete"],
+        "type": "apiCall"
+      },
+      {
+        "active": true,
+        "conditions": "const condition: Condition = async({row, change, logging}) => {\n \n  logging.log(\"condition started\")\n  \n  return true;\n  \n}",
+        "extensionBody": "const extensionBody: PushNotificationBody = async({row, db, change, ref, logging}) => {\n \n  logging.log(\"extensionBody started\")\n  \n  // Import any NPM package needed\n  // const lodash = require('lodash');\n  \n  // You can use FCM token from the row or from the user document in the database\n  // const FCMtoken = row.FCMtoken\n  // Or push through topic  \n  const topicName = 'industry-tech';\n  // You can return single or array of notification payloads\n  return [{\n    notification: {\n      title: 'Hello!',\n    },\n    android: {\n      notification: {\n        imageUrl: 'https://thiscatdoesnotexist.com/'\n      }\n    },\n    apns: {\n      payload: {\n        aps: {\n          'mutable-content': 1\n        }\n      },\n      fcm_options: {\n        image: 'https://thiscatdoesnotexist.com/'\n      }\n    },\n    webpush: {\n      headers: {\n        image: 'https://thiscatdoesnotexist.com/'\n      }\n    },\n    // topic: topicName, // add topic send to subscribers\n    // token: FCMtoken // add FCM token to send to specific user\n  }]\n  \n}",
+        "lastEditor": {
+          "displayName": "Arnab Roy",
+          "lastUpdate": 1741098138265,
+          "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocLjnNs2jQlsCWlkqUiG4rrtvYI4cq7zvby-6lssGqwWkxoOjqLFOg=s96-c"
+        },
+        "name": "pushNotification extension",
+        "requiredFields": [],
+        "trackedFields": [],
+        "triggers": ["create", "update", "delete"],
+        "type": "pushNotification"
+      }
+    ],
+    "functionConfigPath": "_rowy_/settings/functions/Real_Estate_Website",
+    "lastUpdatedGitHubUser": {
+      "email": "rarnab225@gmail.com",
+      "username": "rarnab225@gmail.com"
+    },
+    "runtimeOptions": {},
+    "subTables": {},
+    "webhooks": [
+      {
+        "active": true,
+        "auth": {
+          "enabled": true
+        },
+        "conditions": "const condition: Condition = async({ref, req, db, logging}) => {\n  // WRITE YOUR CODE ONLY BELOW THIS LINE. DO NOT WRITE CODE/COMMENTS OUTSIDE THE FUNCTION BODY\n  logging.log(\"condition started\")\n  \n  return true;\n  // WRITE YOUR CODE ONLY ABOVE THIS LINE. DO NOT WRITE CODE/COMMENTS OUTSIDE THE FUNCTION BODY\n}",
+        "endpoint": "ir3mo7xbZirAIQekI58I",
+        "lastEditor": {
+          "displayName": "Arnab Roy",
+          "lastUpdate": 1741098098591,
+          "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocLjnNs2jQlsCWlkqUiG4rrtvYI4cq7zvby-6lssGqwWkxoOjqLFOg=s96-c"
+        },
+        "name": "firebaseAuth webhook",
+        "parser": "const firebaseAuthParser: Parser = async({req, db, ref, logging}) =>{\n  // WRITE YOUR CODE ONLY BELOW THIS LINE. DO NOT WRITE CODE/COMMENTS OUTSIDE THE FUNCTION BODY\n  logging.log(\"firebaseAuthParser started\")\n  /**\n   * This is a sample parser for firebase authentication\n   * creates a user document in the collection if it doesn't exist\n  // check if document exists,\n  const userDoc = await ref.doc(user.uid).get()\n  if(!userDoc.exists){\n    await ref.doc(user.uid).set({email:user.email})\n  }\n  */\n return;\n};",
+        "type": "firebaseAuth"
+      }
+    ]
+  },
+  "audit": true,
+  "auditFieldCreatedBy": "_createdBy",
+  "auditFieldUpdatedBy": "_updatedBy",
+  "collection": "Real_Estate_Website",
+  "description": "",
+  "details": "",
+  "id": "realEstateWebsite",
+  "name": "Real Estate Website",
+  "rules": {
+    "create": ["ADMIN", "EDITOR", "OWNER"],
+    "delete": ["ADMIN", "OWNER"],
+    "read": ["ADMIN", "EDITOR", "OWNER"],
+    "update": ["ADMIN", "OWNER"]
+  },
+  "sameRuleForSubCollections": false,
+  "searchIndex": "",
+  "section": "Other",
+  "tableType": "primaryCollection",
+  "thumbnailURL": "",
+  "_searchEnabled": false
+}

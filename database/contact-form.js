@@ -4,13 +4,14 @@ import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBfvslvEf05guHvooDN_Y1XKjGrJQyJVIs",
-    authDomain: "login-contac-form.firebaseapp.com",
-    projectId: "login-contac-form",
-    storageBucket: "login-contac-form.firebasestorage.app",
-    messagingSenderId: "617271546176",
-    appId: "1:617271546176:web:9779f18a24451ac56caaa5"
-  };
+  apiKey: "AIzaSyBfvslvEf05guHvooDN_Y1XKjGrJQyJVIs",
+  authDomain: "login-contac-form.firebaseapp.com",
+  databaseURL: "https://login-contac-form-default-rtdb.firebaseio.com",
+  projectId: "login-contac-form",
+  storageBucket: "login-contac-form.appspot.com",
+  messagingSenderId: "617271546176",
+  appId: "1:617271546176:web:389ff3c646ea1a5c6caaa5",
+};
   
 
   
